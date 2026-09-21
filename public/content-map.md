@@ -85,4 +85,3 @@ Object: Book pavilion and study garden. Scene position: 0, 1.
 | evocca | Diploma of Game Design studies | Evocca | 2015 and 2016 | cv2024, p. 1: Right panel, Life-Long Learning; timeline, p. 2: Middle timeline, Diploma of Game Design @ Evocca |
 | ai-study | Artificial intelligence and machine learning | Self-directed learning | Since 2010, as reported in the 2024 CV | cv2024, p. 1: Right panel, Life-Long Learning; timeline, p. 2: Middle timeline, Machine Learning and Artificial Intelligence |
 | cyber | Certificate IV in Cyber Security studies | TAFE | 2022 | cv2024, p. 1: Right panel, Life-Long Learning |
-
