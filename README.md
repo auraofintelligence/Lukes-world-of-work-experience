@@ -1,6 +1,6 @@
 # Luke's world of work
 
-A small 3D harbour built from Luke Hayes' work and education history. Visit eight places to discover 15 work roles and 13 education or training entries. The world is fictional; its facts come from the two supplied resume PDFs.
+A richly illustrated working harbour and learning village built from Luke Hayes' history. Every identified job has a separate building or vehicle; each named educator has a separate building. Currently 17 work records and 14 education/training records are mapped to 27 individual places. This is an expanding source inventory, not a claim that Luke has had only 17 jobs. The settings are fictional; the facts come from supplied resumes, Luke's journal and his direct corrections.
 
 Live: https://auraofintelligence.github.io/Lukes-world-of-work-experience/
 
@@ -13,7 +13,7 @@ npm ci
 npm run dev
 ```
 
-Open the local address shown. Drag the world to orbit, scroll or use buttons to zoom, and select a building, map label or chapter button. Arrow keys pan when the scene is focused. The guided route has previous/next buttons. Escape closes a chapter. Discovery progress lasts for this visit only.
+Open the local address shown. Switch between Work harbour and Learning village. Drag to pan, use buttons or pinch to zoom, and select a building, numbered marker or place button. When the scene is focused, the wheel zooms, arrow keys pan, +/- zoom and Home resets the view. The guided route has previous/next buttons. Escape closes a record. Discovery progress lasts for this visit only.
 
 ## Build and check
 
@@ -25,7 +25,7 @@ npm run preview
 
 The build creates `dist/`, generates a complete readable no-JavaScript history in index.html and an object-to-fact content map. A GitHub Actions Pages workflow builds and publishes on pushes to main. Set repository Settings > Pages > Source to GitHub Actions. No backend, account, runtime API or CDN is needed.
 
-The fallback works without WebGL or JavaScript. Mobile has numbered scene buttons matching the chapter strip. Reduced-motion preferences pause ambient animation. All factual data is escaped before rendering.
+The fallback works without WebGL or JavaScript. Mobile has numbered scene buttons matching the scrollable place strip. Reduced-motion preferences pause ambient animation and camera easing. All factual data is escaped before rendering.
 
 ## Content
 
@@ -35,7 +35,9 @@ Startups and volunteering are deferred. A mixed mostly-volunteer web design entr
 
 ## Design and assets
 
-The harbour groups practical roles by what visitors can recognise: shop, workshop, stage, railway, airport, warehouse, building site and learning pavilion. The original AI-generated holding-page artwork is in public/assets/harbour-concept.png. Its prompt and generation method are in docs/artwork.md. The interactive world uses original procedural geometry and a code-drawn SVG favicon.
+The generated artwork is the actual visual surface of the experience, with individually mapped buildings and vehicles. Three.js projects each illustration onto a shallow relief mesh. Restrained parallax, open-water movement, camera pan and zoom preserve the detailed illustration. This is an illustrated 2.5D world, not a reconstructed town with unseen sides or unrestricted walking. The application remains client-side and static.
+
+The original concept is public/assets/harbour-concept.png. The working harbour is public/assets/harbour-world.png and the learning village is public/assets/learning-village.png. Prompts and generation method are in docs/artwork.md. The SVG favicon is code-drawn. Online learning platforms, personal study and workplace tickets with unnamed issuers are distinguished from named educators.
 
 ## Maintenance
 

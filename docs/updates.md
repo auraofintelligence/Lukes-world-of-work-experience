@@ -1,8 +1,11 @@
 # Updating the world
 
-1. Edit `public/content/resume.json`. Each record has a stable ID, a work/education type, a place ID, title, organisation, location, date wording, summary and source references. Use a note for uncertainty. Keep approximate dates approximate.
-2. Put the record in one of the existing places, or add a place with a unique ID, name, object description, position and model. Available models: shop, workshop, stage, rail, airport, warehouse, construction and learning. New places automatically receive buttons and labels.
-3. Run `npm run build` to regenerate the no-JavaScript history, content map and static site. This updates the scene's content without modelling every fact by hand.
-4. Run `npm run check`, review the changes, and preview with `npm run preview`. Push reviewed changes to main to deploy through GitHub Actions.
+1. Edit `public/content/resume.json`. Each record has a stable ID, work/education type, place ID, title, organisation, location, date wording, summary and source references. A source can identify a PDF page, a journal passage or Luke's direct correction. Preserve uncertainty where the sources are incomplete.
+2. Give every additional job its own place. Never merge different jobs just because they share an industry or employer. Each different educator gets its own building; multiple courses from the same educator can share that educator's building.
+3. A place has a unique ID, name, object description, scene ID and `anchor: [x,y]`. Coordinates run from 0 to 1 across the image, starting at the top-left. The position must point to a distinct visible building or vehicle. Reuse of the same object for another job is not allowed. If no suitable object exists, expand or regenerate the artwork or add another scene, then inspect it and adjust anchors.
+4. Scenes have an ID, name and local image path. The current views are Work harbour and Learning village. All art is in `public/assets/` and served from the Pages origin. Keep the dense miniature-world style rather than replacing it with simplified geometry.
+5. Run `npm run build`, `npm run check` and `git diff --check`. The build regenerates the no-JavaScript history and content map. Check every new marker, scene switching, mobile navigation and source notes before publishing the approved changes.
 
-To swap source material, read and verify the new documents, add their title, page count and SHA-256 hash to the sources array, and update affected records. Do not place unredacted PDFs, addresses, phone numbers or referee details in public assets. Source facts can change independently of the 3D scene. A newly awarded qualification must be supported, not inferred from enrolment.
+Luke's latest direct correction takes precedence over an older document. Do not derive employment from assistant-authored reflections in the journal. Do not publish the original private source files or unrelated personal passages. Never infer completion from enrolment or current validity from a historical ticket.
+
+There is no cap on jobs, educators or records, and the current map is not presented as a complete lifetime inventory. Updates happen through conversation with Luke, not scheduled automations.

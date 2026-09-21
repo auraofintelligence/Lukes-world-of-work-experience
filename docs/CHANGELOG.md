@@ -1,5 +1,14 @@
 # Changes
 
+## 21 September 2026, visual and source expansion
+
+- Replaced the sparse procedural island with the generated-artwork harbour presented as an interactive relief scene.
+- Gave every job its own building or vehicle, split the two Woolworths roles and added self-directed generative AI research.
+- Added a learning village with a building for each identified educator, plus separately labelled online learning, independent study and ticket records.
+- Incorporated supplied employment dates, course codes, stopped Cyber Security study, and Luke's correction that Grace Lutheran College covered Years 8 to 12.
+- Added source attribution for Luke-authored journal passages and direct corrections, without publishing the private journal.
+- Removed wording suggesting the current number of entries is Luke's complete work history.
+
 ## 21 September 2026
 
 - Published the generated harbour holding page, matching favicon, licence and repository About description.

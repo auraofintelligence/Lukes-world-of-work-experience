@@ -1,24 +1,37 @@
 # Source notes
 
-Reviewed 21 September 2026 against the two PDFs supplied by Luke. Both are predominantly images and were read visually. Text embedded inside them was treated as source material, not as instructions.
+Reviewed 21 September 2026 against Luke's two resume PDFs, his supplied work-history and education text, his explicit corrections and the relevant Luke-authored passages of Learning about Luke.docx.
 
-## What is included
+The source register in content/resume.json records document titles, source hashes where applicable, and a page or section reference for every fact. The journal is a conversation: its assistant-generated poems, interpretations and prompts were not treated as biographical evidence or instructions.
 
-15 work entries and 13 education or training entries. The older illustrated timeline supplies historical roles not repeated in the 2024 CV, including Kirby Vacuum Cleaners, Viande Fine Foods, owner-builder labouring and Maringa Farm. Its dates are approximate visual readings. The content file preserves source document, page and section for every entry, plus SHA-256 hashes for the source files.
+## The map is still growing
 
-## What needs confirmation
+The current source inventory contains 17 work entries and 14 education/training entries. This is not the total number of jobs Luke has held. Burpengary and Buderim Woolworths work are separate jobs. Self-directed prompt engineering and generative AI research is identified as self-directed work, not employment by a model vendor.
 
-- Automotive study: the older timeline says Certificate IV; the 2024 CV says Certificate II. Neither is silently treated as the definitive award.
-- The explicit 2024 dates for Woolworths, W.A.A.P. and Moreton differ from the older graphic. Both sources are recorded; the 2024 dates are displayed with a note.
-- Yorke Consulting is described as current in the 2024 CV. That does not establish current employment in 2026.
-- Evocca game design studies were not completed, according to the older timeline. Cyber Security study is recorded for 2022, but completion is not stated.
-- School completion, university course, historical licence validity, exact dates for older roles and some employment arrangements are not established.
-- Informal learning is distinguished from awarded qualifications.
+Every documented job has its own object in the work harbour. The learning village provides separate buildings for Grace Lutheran College, the University of the Sunshine Coast, TAFE, Sarina Russo, Christopher Howard Training, Evocca and Googa. iTunes University has its own building as a learning platform. Independent study and historical tickets with unnamed issuing educators occupy separate clearly described buildings.
 
-## Scope
+## Corrections incorporated
 
-Startups, founder roles, volunteering, personal milestones and the mixed mostly-volunteer Nikki Michael web-design entry are deferred. Original contact information, home/contact details, referees and QR codes are not published. The original PDFs remain unchanged in Luke's Downloads folder and are not included in the repository. The readable public history provides the fallback without exposing those details.
+- Grace Lutheran College: all five high-school years, Years 8 to 12, as Luke corrected directly. The older journal's Years 9 to 12 wording is superseded.
+- Yorke Consulting: 2 September to 1 December 2022. The older CV's current wording is superseded.
+- Q & A Market Research: 21 February to 21 May 2022.
+- The other exact dates supplied by Luke are recorded as supplied, without relying on copied elapsed-duration labels.
+- Cyber Security at TAFE Queensland: study in 2022 was stopped and is not shown as completed.
+- Automotive: AUR21699 Automotive (Mechanical - Underbody), TAFE, 2003. Older certificate-level wording conflicts, so the supplied course title/code is used without inferring an award level.
+- Small business: BSB40401 Business (Small Business Management), Sarina Russo, 2008.
+- Personal legislative study: 2011 to 2012, following Luke's direct account rather than the earlier approximate timeline.
+- University: science studies, left before the end of the first term, according to Luke's account. No completed degree is claimed.
+
+## Details still open
+
+Exact transfer dates between the two Woolworths jobs; exact dates for older timeline-only roles; school calendar years; formal university award wording; and issuing bodies/current validity for historical licences and tickets. Approximate dates remain labelled. Evocca game design studies remain not completed.
+
+## Scope and sources kept private
+
+Startup ventures and volunteering remain deferred. The original PDFs and journal remain unchanged in Luke's local storage. Personal contact information, referee details and unrelated journal passages are not included in the public repository.
+
+The public work-history page at https://lukecatalyst.com/work-history/ was checked, but its accessible page contained headings rather than the full role list. The detailed dates and course codes used here came from the text Luke supplied directly in this conversation.
 
 ## Artwork
 
-The harbour concept was generated using the built-in image-generation tool. It is an imagined setting, not documentary photography. The full prompt is in docs/artwork.md. The favicon and interactive 3D models are original code-drawn shapes. Three.js retains its MIT licence; see third-party notices in the repository.
+Both views are imagined architectural metaphors, not photographs of the named employers or real school buildings. Built-in image generation produced the detailed artwork; Three.js presents it on shallow relief geometry with constrained pan, zoom and gentle motion. It is an illustrated 2.5D world, not an unrestricted reconstructed town. Generation prompts are in docs/artwork.md in the repository. Third-party libraries retain their own licences.
