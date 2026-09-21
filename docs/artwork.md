@@ -1,5 +1,7 @@
 # Harbour concept artwork
 
+The UK, Australian trades and volunteering additions have their final paths and built-in generation prompts in [artwork-expansion.md](artwork-expansion.md).
+
 ## Interactive world revision
 
 The sparse procedural scene was replaced after Luke requested the richness of the original generated image, a distinct building or vehicle per job, and a building for each educator. The built-in image-generation tool created public/assets/harbour-world.png and public/assets/learning-village.png using the preceding harbour image as a reference. Generated layouts were visually inspected; actual marker coordinates come from the resulting images, not the proposed coordinates in the prompts.

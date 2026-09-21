@@ -1,9 +1,10 @@
 /* The illustration fills the view; the interface sits lightly over open water. */
 body{background:#102d36;color:#f5ecd9}
-.scene-switch{position:absolute;z-index:9;top:28px;left:50%;transform:translateX(-50%);display:flex;gap:3px;padding:4px;border:1px solid #e6d7b542;border-radius:30px;background:#112e4099;backdrop-filter:blur(14px)}
-.scene-switch button{border:0;background:none;color:#eee6d5;padding:10px 17px;font-size:11px;border-radius:25px;white-space:nowrap}
+.scene-switch{position:absolute;z-index:9;top:94px;left:50%;transform:translateX(-50%);display:flex;gap:3px;padding:4px;width:max-content;max-width:91%;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#dbc59c66 transparent;border:1px solid #e6d7b542;border-radius:30px;background:#112e4099;backdrop-filter:blur(14px)}
+.scene-switch button{flex-shrink:0;border:0;background:none;color:#eee6d5;padding:10px 17px;font-size:11px;border-radius:25px;white-space:nowrap}
 .scene-switch button[aria-pressed="true"]{background:#ead3a6;color:#18313f}
-.education-scene #world,.education-scene.fallback #world{background-image:url('/assets/learning-village.png')}
+.scene-switch button:focus-visible{outline:2px solid #f0d19d;outline-offset:-2px}
+.scene-loading #scene,.scene-loading #labels{visibility:hidden}
 header{position:absolute;inset:0 0 auto;z-index:8;height:96px;border:0;background:linear-gradient(#0c253763,transparent);color:#fff5e1;padding-inline:4%;pointer-events:none}
 header a,header button{pointer-events:auto}
 .brand{gap:11px;font-size:15px;text-shadow:0 1px 12px #061b31}
@@ -12,7 +13,7 @@ header a,header button{pointer-events:auto}
 nav{font-size:13px;gap:27px;text-shadow:0 1px 8px #071a24}
 nav a{border-color:#fff6dc66}
 nav button{padding:12px 18px;border-radius:30px;background:#142f3b66;backdrop-filter:blur(10px);border:1px solid #fff6dc25}
-#world{height:100svh;min-height:780px;max-height:1300px;background:#143744 url('/assets/harbour-world.png') center/cover}
+#world{height:100svh;min-height:780px;max-height:1300px;background:#143744 var(--scene-art,url('/assets/harbour-world.png')) center/cover}
 #world::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#051e359c 0%,#051e3533 27%,transparent 52%),linear-gradient(0deg,#071f31d9 0%,transparent 26%)}
 #scene{cursor:grab}
 #scene:active{cursor:grabbing}
@@ -52,7 +53,7 @@ nav button{padding:12px 18px;border-radius:30px;background:#142f3b66;backdrop-fi
 .pin-name{position:absolute;top:-38px;left:50%;transform:translateX(-50%) translateY(4px);pointer-events:none;background:#102f40f0;border:1px solid #ecd7a54d;white-space:nowrap;color:#fff1d4;padding:8px 11px;border-radius:5px;font-size:11px;opacity:0;transition:opacity .15s,transform .15s}
 .pin:hover .pin-name,.pin:focus-visible .pin-name{opacity:1;transform:translateX(-50%) translateY(0)}
 .pin.visited{border-color:#d4dfb0}
-.world-active .world-heading{top:115px;max-width:280px}
+.world-active .world-heading{top:157px;max-width:280px}
 .world-active .world-heading h1{font-size:30px}
 .world-active #world::after{background:linear-gradient(0deg,#071f31ce 0%,transparent 26%),linear-gradient(#09283c30,transparent 25%)}
 .history{max-width:none;background:#f5f0e5;color:#203f40;padding:90px max(5%,calc((100% - 1080px)/2))}
@@ -63,14 +64,15 @@ nav button{padding:12px 18px;border-radius:30px;background:#142f3b66;backdrop-fi
 #detail h2{font-size:38px}
 #scrim{background:linear-gradient(90deg,transparent 35%,#05243938 70%)}
 dialog{color:#203f40}
-.fallback #world{height:100svh;min-height:780px;background:linear-gradient(90deg,#082a3a5c,transparent),url('/assets/harbour-world.png') center/cover}
+.fallback #world{height:100svh;min-height:780px;background:linear-gradient(90deg,#082a3a5c,transparent),var(--scene-art,url('/assets/harbour-world.png')) center/cover}
 .fallback .world-heading,.fallback .welcome{color:#fff2d9}
+.fallback #labels{display:none}
 .no-script{margin:0;background:#f5f0e5;color:#203f40}
 @media(min-width:1500px){.welcome{max-width:330px}.welcome p{font-size:17px}.world-heading{top:25%}}
 @media(max-width:1100px){.world-heading{max-width:45%;top:24%}.world-heading h1{font-size:52px}.welcome{top:48%;max-width:265px}.welcome .text-button{display:block;margin:0;padding-top:17px}.welcome p{font-size:13px}#place-list{display:flex;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#dbc59c66 transparent;padding-bottom:6px}.place-card{flex:0 0 136px}.world-footer .instructions{display:none}}
 @media(max-width:600px){
   header{height:78px;padding-inline:5%}.brand{font-size:12px;gap:8px}.brand b{font-size:15px}.brand img{height:30px;width:30px}nav{gap:14px;font-size:10px}nav button{padding:9px 0;background:none;border:0;backdrop-filter:none}nav a{padding:9px 0}
-  .scene-switch{top:81px;left:6%;transform:none;padding:3px}.scene-switch button{padding:8px 15px;font-size:10px}
+  .scene-switch{top:81px;left:6%;right:6%;width:auto;max-width:none;transform:none;padding:3px}.scene-switch button{padding:10px 15px;font-size:10px}
   #world,.fallback #world{height:100svh;min-height:760px;background-position:65% center}
   #world::after{background:linear-gradient(#081e3899,transparent 35%),linear-gradient(0deg,#061e33ed 12%,#061e338f 34%,transparent 56%)}
   .world-heading{top:142px;left:6%;max-width:82%}.world-heading h1{font-size:36px;line-height:1.03;margin-bottom:15px}.world-heading p{font-size:11px}

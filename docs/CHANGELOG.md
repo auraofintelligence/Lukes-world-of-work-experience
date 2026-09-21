@@ -1,5 +1,12 @@
 # Changes
 
+## 21 September 2026, missing jobs and volunteering
+
+- Added Mobil Service Station Burpengary as Luke's first job, five UK temporary roles and five further Australian trades roles. WAAP remains its existing separate record.
+- Added seven source-backed volunteer records, including the museum's confirmed full name and SDNx from 2019 to present during visits to India.
+- Expanded the illustrated world with separate UK, Australian trades and volunteering scenes, and added a volunteering filter.
+- Preserved unknown dates, unnamed employers, intermittent work and the distinction between client sites and employers. Kept the unclassified My Recovery event in the unresolved source inventory.
+
 ## 21 September 2026, visual and source expansion
 
 - Replaced the sparse procedural island with the generated-artwork harbour presented as an interactive relief scene.

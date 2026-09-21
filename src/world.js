@@ -8,6 +8,7 @@ export async function createWorld(container, data, onSelect, onLost) {
   let activeScene = 'work';
   let sceneRequest = 0;
   const textures = new Map();
+  const pendingTextures = new Map();
   const WIDTH = 60;
   const HEIGHT = 40;
   const scene = new THREE.Scene();
@@ -21,7 +22,9 @@ export async function createWorld(container, data, onSelect, onLost) {
 
   let texture;
   try {
-    texture = await new THREE.TextureLoader().loadAsync(new URL('./assets/harbour-world.png', document.baseURI).href);
+    const entry = data.scenes.find(scene => scene.id === activeScene);
+    if (!entry) throw new Error('The starting scene is missing');
+    texture = await new THREE.TextureLoader().loadAsync(new URL(entry.image, document.baseURI).href);
   } catch (error) {
     renderer.dispose();
     renderer.domElement.remove();
@@ -40,16 +43,16 @@ export async function createWorld(container, data, onSelect, onLost) {
   const uv = geometry.attributes.uv;
   for (let i = 0; i < positions.count; i++) positions.setZ(i, depthAt(uv.getX(i), uv.getY(i)));
   geometry.computeVertexNormals();
-  const uniforms = { image: { value: texture }, time: { value: 0 } };
+  const uniforms = { image: { value: texture }, time: { value: 0 }, waterMotion: { value: 1 } };
   const material = new THREE.ShaderMaterial({
     uniforms,
     vertexShader: `varying vec2 vUv;
       void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
-    fragmentShader: `uniform sampler2D image; uniform float time; varying vec2 vUv;
+    fragmentShader: `uniform sampler2D image; uniform float time; uniform float waterMotion; varying vec2 vUv;
       void main(){
         vec2 p=vUv;
         // Ripples stay in open water, well clear of shore and horizon.
-        float water=(1.-smoothstep(.15,.28,p.x))*smoothstep(.02,.15,p.y)*(1.-smoothstep(.58,.68,p.y));
+        float water=waterMotion*(1.-smoothstep(.15,.28,p.x))*smoothstep(.02,.15,p.y)*(1.-smoothstep(.58,.68,p.y));
         p.x+=sin(p.y*160.+time*.55)*.00019*water;
         p.y+=sin(p.x*130.-time*.35)*.00014*water;
         gl_FragColor=texture2D(image,p);
@@ -239,18 +242,28 @@ export async function createWorld(container, data, onSelect, onLost) {
 
   async function setScene(id) {
     const request = ++sceneRequest;
+    const entry = data.scenes.find(s => s.id === id);
+    if (!entry) throw new Error('Unknown world scene');
     if (activeScene === id) return;
     if (!textures.has(id)) {
-      const entry = data.scenes.find(s => s.id === id);
-      if (!entry) throw new Error('Unknown world scene');
-      const next = await new THREE.TextureLoader().loadAsync(new URL(entry.image, document.baseURI).href);
-      next.colorSpace = THREE.SRGBColorSpace;
-      next.anisotropy = texture.anisotropy;
-      textures.set(id, next);
+      if (!pendingTextures.has(id)) {
+        const loading = new THREE.TextureLoader().loadAsync(new URL(entry.image, document.baseURI).href).then(next => {
+          next.colorSpace = THREE.SRGBColorSpace;
+          next.anisotropy = texture.anisotropy;
+          textures.set(id, next);
+        }).finally(() => pendingTextures.delete(id));
+        pendingTextures.set(id, loading);
+      }
+      try { await pendingTextures.get(id); }
+      catch (error) {
+        if (request !== sceneRequest) return;
+        throw error;
+      }
     }
     if (request !== sceneRequest) return;
     activeScene = id;
     uniforms.image.value = textures.get(id);
+    uniforms.waterMotion.value = id === 'work' ? 1 : 0;
     home();
     camera.position.x = target.x;
     camera.position.y = target.y;

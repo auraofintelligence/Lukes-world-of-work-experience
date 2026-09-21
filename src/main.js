@@ -1,43 +1,74 @@
 import { escapeHTML as e, recordHTML } from './content.js';
 const $ = selector => document.querySelector(selector);
-let data, world, selected = 0, lastFocus, activeScene = 'work', navigation = 0;
+let data, world, selected = 0, lastFocus, activeScene = 'work', navigation = 0, sceneNavigation = 0;
 const visited = new Set();
 const detail = $('#detail');
 const status = $('#status');
 const activate = () => { document.body.classList.add('world-active'); status.textContent = ''; };
+const placeLabels = { work: 'WORK', education: 'LEARNING', volunteering: 'VOLUNTEERING' };
+
+function renderSceneNavigation() {
+  const navigation = $('.scene-switch');
+  navigation.replaceChildren();
+  for (const scene of data.scenes) {
+    const button = document.createElement('button');
+    button.dataset.scene = scene.id;
+    button.textContent = scene.name;
+    button.setAttribute('aria-pressed', String(scene.id === activeScene));
+    button.onclick = () => { activate(); showScene(scene.id); };
+    navigation.append(button);
+  }
+  navigation.hidden = false;
+}
 
 function renderRoute() {
+  const scene = data.scenes.find(scene => scene.id === activeScene);
+  const kinds = new Set(data.places.filter(place => place.scene === activeScene).map(place => place.kind));
+  const kind = kinds.size === 1 ? [...kinds][0] : 'mixed';
   $('#place-list').replaceChildren();
   data.places.forEach((place, index) => {
     if (place.scene !== activeScene) return;
     const button = document.createElement('button');
     button.className = 'place-card' + (visited.has(place.id) ? ' visited' : '');
     button.dataset.place = place.id;
-    button.innerHTML = `<span>${String(index + 1).padStart(2, '0')} / ${place.kind === 'work' ? 'WORK' : 'LEARNING'}</span><strong>${e(place.name)}</strong>`;
+    button.innerHTML = `<span>${String(index + 1).padStart(2, '0')} / ${placeLabels[place.kind] || 'HISTORY'}</span><strong>${e(place.name)}</strong>`;
     button.onclick = () => openPlace(index);
     $('#place-list').append(button);
   });
   $('#place-list').scrollLeft = 0;
-  $('.route-title > span').textContent = activeScene === 'work' ? 'Every job has its own place' : 'A building for each educator';
-  $('.instructions').textContent = 'Drag to explore · Zoom for a closer look · ' + (activeScene === 'work' ? 'Pick a job' : 'Pick a building');
+  const routeLabels = { work: 'Every job has its own place', education: 'A building for each educator', volunteering: 'Discover the volunteering stories' };
+  const actions = { work: 'Pick a job', education: 'Pick a building', volunteering: 'Pick a contribution' };
+  $('.route-title > span').textContent = scene.routeLabel || routeLabels[kind] || 'Choose a place';
+  $('.instructions').textContent = 'Drag to explore · Zoom for a closer look · ' + (actions[kind] || 'Pick a place');
   document.querySelectorAll('[data-scene]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.scene === activeScene)));
-  document.body.classList.toggle('education-scene', activeScene === 'education');
-  $('.world-heading h1').innerHTML = activeScene === 'education' ? 'A lifetime<br>of learning.' : 'A working life.<br>A world to explore.';
+  const activeButton = $('.scene-switch [aria-pressed="true"]');
+  if (activeButton) $('.scene-switch').scrollLeft = activeButton.offsetLeft - ($('.scene-switch').clientWidth - activeButton.clientWidth) / 2;
+  document.body.dataset.worldScene = activeScene;
+  $('#world').style.setProperty('--scene-art', `url(${JSON.stringify(new URL(scene.image, document.baseURI).href)})`);
+  const defaultHeadings = { work: 'A working life.\nA world to explore.', education: 'A lifetime\nof learning.', volunteering: 'Time shared.\nStories connected.' };
+  $('.world-heading h1').innerHTML = e(scene.heading || defaultHeadings[kind] || scene.name).replace(/\n/g, '<br>');
+  $('#scene').setAttribute('aria-label', `${scene.name}. Drag to explore, use the zoom buttons for a closer look, or select a numbered place. Arrow keys pan when focused.`);
 }
 
 async function showScene(id) {
-  if (!data) return;
+  const scene = data?.scenes.find(scene => scene.id === id);
+  if (!scene) return;
+  const request = ++sceneNavigation;
   activeScene = id;
   renderRoute();
-  if (world) {
-    status.textContent = 'Opening ' + data.scenes.find(s => s.id === id).name.toLowerCase() + '...';
-    try { await world.setScene(id); status.textContent = ''; }
-    catch { fallback('This illustrated view could not load.'); }
+  if (world && !document.body.classList.contains('fallback')) {
+    $('#world').classList.add('scene-loading');
+    status.textContent = 'Opening ' + scene.name.toLowerCase() + '...';
+    try {
+      await world.setScene(id);
+      if (request === sceneNavigation) status.textContent = '';
+    } catch {
+      if (request === sceneNavigation) fallback('This illustrated view could not load.');
+    } finally {
+      if (request === sceneNavigation) $('#world').classList.remove('scene-loading');
+    }
   }
 }
-document.querySelectorAll('[data-scene]').forEach(button => {
-  button.onclick = () => { activate(); showScene(button.dataset.scene); };
-});
 
 function closeDetail() {
   navigation++;
@@ -118,6 +149,7 @@ async function init() {
   } catch { fallback('The world could not load.'); return; }
   $('#records').innerHTML = data.records.toSorted((a, b) => a.sort - b.sort).map(r => recordHTML(r, data.sources)).join('');
   filter();
+  renderSceneNavigation();
   renderRoute();
   $('#surprise').onclick = () => {
     const candidates = data.places.map((place, index) => ({ place, index })).filter(({ place }) => place.scene === activeScene);
@@ -126,8 +158,7 @@ async function init() {
   try {
     const { createWorld } = await import('./world.js');
     world = await createWorld($('#scene'), data, openPlace, () => fallback('3D is unavailable in this browser.'));
-    if (activeScene !== 'work') await world.setScene(activeScene);
-    status.textContent = '';
+    await showScene(activeScene);
     $('#zoom-in').onclick = () => world.zoom(1.2);
     $('#zoom-out').onclick = () => world.zoom(1 / 1.2);
     $('#reset').onclick = () => world.reset();

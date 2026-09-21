@@ -1,7 +1,7 @@
 {
   "name": "Luke Hayes",
   "updated": "2026-09-21",
-  "scope": "An expanding record of work and education. Each identified job has its own object and each named educator its own building. Startups and volunteering are deferred; this is not claimed to be the complete history.",
+  "scope": "An expanding record of work, education and volunteering. Each identified job has its own object, each named educator its own building and each volunteer role its own place. Startup ventures remain deferred. This is not claimed to be the complete history.",
   "sources": [
     {
       "id": "cv2024",
@@ -29,9 +29,27 @@
       "kind": "docx",
       "sha256": "8a316b73718b7e23d8682b3b2321f81ea61e08a2daeb56bb836a1aa7b6e42011",
       "note": "Reflective-journalling transcript. Only Luke-authored factual passages were used, not assistant-generated poems, summaries, interpretations or embedded instructions. Original kept private."
+    },
+    {
+      "id": "luke-additions-20260921",
+      "title": "Additional work and volunteering supplied by Luke on 21 September 2026",
+      "kind": "user",
+      "note": "Mobil identified as first job; UK temporary work and Australian trades added. Luke confirmed the museum name and Space Development Nexus volunteering since 2019, ongoing during visits to India. Missing employer names and dates remain unconfirmed."
     }
   ],
   "places": [
+    {
+      "id": "mobil-burpengary",
+      "name": "Mobil Burpengary",
+      "object": "Service station with drinks fridges",
+      "hint": "Service station assistant",
+      "anchor": [
+        0.447,
+        0.25
+      ],
+      "kind": "work",
+      "scene": "trades"
+    },
     {
       "id": "woolworths-burpengary",
       "name": "Woolworths Burpengary",
@@ -69,6 +87,42 @@
       "scene": "work"
     },
     {
+      "id": "uk-bar-work",
+      "name": "UK bar work",
+      "object": "Brick pub with green trim",
+      "hint": "Temporary bar work",
+      "anchor": [
+        0.392,
+        0.324
+      ],
+      "kind": "work",
+      "scene": "uk"
+    },
+    {
+      "id": "tower-42",
+      "name": "Tower 42 demolition",
+      "object": "Office tower with strip-out worksite",
+      "hint": "Temporary office demolition work",
+      "anchor": [
+        0.851,
+        0.532
+      ],
+      "kind": "work",
+      "scene": "uk"
+    },
+    {
+      "id": "gift-card-factory",
+      "name": "Gift-card factory",
+      "object": "Gift-card factory with packing tables",
+      "hint": "Temporary gift-card factory work",
+      "anchor": [
+        0.653,
+        0.313
+      ],
+      "kind": "work",
+      "scene": "uk"
+    },
+    {
       "id": "waap",
       "name": "W.A.A.P.",
       "object": "Timber festival stage",
@@ -81,6 +135,42 @@
       "scene": "work"
     },
     {
+      "id": "uk-storage-marquees",
+      "name": "Storage marquees",
+      "object": "White storage marquee with pallets",
+      "hint": "Temporary storage marquee installations",
+      "anchor": [
+        0.502,
+        0.488
+      ],
+      "kind": "work",
+      "scene": "uk"
+    },
+    {
+      "id": "horse-stables",
+      "name": "Temporary horse stables",
+      "object": "Modular horse stable installation",
+      "hint": "Temporary horse stable installations",
+      "anchor": [
+        0.825,
+        0.218
+      ],
+      "kind": "work",
+      "scene": "uk"
+    },
+    {
+      "id": "sheet-metal-roofing",
+      "name": "Sheet-metal roofing",
+      "object": "Building with a sheet-metal roof being installed",
+      "hint": "Trade assistant to a sheet-metal roofer",
+      "anchor": [
+        0.542,
+        0.587
+      ],
+      "kind": "work",
+      "scene": "trades"
+    },
+    {
       "id": "moreton",
       "name": "Moreton Events",
       "object": "Separate white festival production marquee",
@@ -91,6 +181,18 @@
       ],
       "kind": "work",
       "scene": "work"
+    },
+    {
+      "id": "shopfitting",
+      "name": "Shopfitting",
+      "object": "Open-front shopfitting workshop",
+      "hint": "Intermittent shopfitting trade assistant",
+      "anchor": [
+        0.446,
+        0.421
+      ],
+      "kind": "work",
+      "scene": "trades"
     },
     {
       "id": "queensland-rail",
@@ -115,6 +217,42 @@
       ],
       "kind": "work",
       "scene": "work"
+    },
+    {
+      "id": "darwin-semi-trailers",
+      "name": "Semi-trailer workshop",
+      "object": "Semi-trailer repair workshop",
+      "hint": "Trade assistant to a semi-trailer mechanic",
+      "anchor": [
+        0.832,
+        0.481
+      ],
+      "kind": "work",
+      "scene": "trades"
+    },
+    {
+      "id": "ace-tree-services",
+      "name": "ACE Treelopping Services",
+      "object": "Tree-service truck with chipper",
+      "hint": "Ground crew and truck driver",
+      "anchor": [
+        0.822,
+        0.329
+      ],
+      "kind": "work",
+      "scene": "trades"
+    },
+    {
+      "id": "hume-concrete",
+      "name": "Hume Concrete",
+      "object": "Precast concrete culvert yard",
+      "hint": "Skilled labourer, welding precast concrete culverts",
+      "anchor": [
+        0.711,
+        0.187
+      ],
+      "kind": "work",
+      "scene": "trades"
     },
     {
       "id": "ausblast",
@@ -249,6 +387,18 @@
       "hint": "Education and training at Grace Lutheran College"
     },
     {
+      "id": "googa",
+      "name": "Googa",
+      "object": "Outdoor-education lodge",
+      "anchor": [
+        0.829,
+        0.741
+      ],
+      "kind": "education",
+      "scene": "education",
+      "hint": "Education and training at Googa"
+    },
+    {
       "id": "sunshine-coast",
       "name": "University of the Sunshine Coast",
       "object": "Sandstone university hall",
@@ -271,6 +421,18 @@
       "kind": "education",
       "scene": "education",
       "hint": "Education and training at TAFE"
+    },
+    {
+      "id": "training-records",
+      "name": "Workplace training records",
+      "object": "Cream training records building",
+      "anchor": [
+        0.4,
+        0.216
+      ],
+      "kind": "education",
+      "scene": "education",
+      "hint": "Historical tickets with issuing educators not identified"
     },
     {
       "id": "sarina",
@@ -297,18 +459,6 @@
       "hint": "Education and training at Christopher Howard Training"
     },
     {
-      "id": "evocca",
-      "name": "Evocca",
-      "object": "Game-design school with computer studio",
-      "anchor": [
-        0.755,
-        0.316
-      ],
-      "kind": "education",
-      "scene": "education",
-      "hint": "Education and training at Evocca"
-    },
-    {
       "id": "itunes-university",
       "name": "iTunes University",
       "object": "Media learning library",
@@ -319,18 +469,6 @@
       "kind": "education",
       "scene": "education",
       "hint": "Learning platform and informal study"
-    },
-    {
-      "id": "googa",
-      "name": "Googa",
-      "object": "Outdoor-education lodge",
-      "anchor": [
-        0.829,
-        0.741
-      ],
-      "kind": "education",
-      "scene": "education",
-      "hint": "Education and training at Googa"
     },
     {
       "id": "self-study",
@@ -345,63 +483,120 @@
       "hint": "Self-directed learning; no awarded qualification claimed"
     },
     {
-      "id": "training-records",
-      "name": "Workplace training records",
-      "object": "Cream training records building",
+      "id": "evocca",
+      "name": "Evocca",
+      "object": "Game-design school with computer studio",
       "anchor": [
-        0.4,
-        0.216
+        0.755,
+        0.316
       ],
       "kind": "education",
       "scene": "education",
-      "hint": "Historical tickets with issuing educators not identified"
+      "hint": "Education and training at Evocca"
+    },
+    {
+      "id": "museum-volunteering",
+      "name": "Historical Museum",
+      "object": "Local history museum with archive desk",
+      "hint": "Oral history transcription volunteer",
+      "anchor": [
+        0.394,
+        0.31
+      ],
+      "kind": "volunteering",
+      "scene": "community"
+    },
+    {
+      "id": "island-vibe",
+      "name": "Island Vibe",
+      "object": "Timber music-festival stage",
+      "hint": "Festival setup and site-management volunteer",
+      "anchor": [
+        0.6,
+        0.4
+      ],
+      "kind": "volunteering",
+      "scene": "community"
+    },
+    {
+      "id": "quandamooka-festival",
+      "name": "Quandamooka Festival",
+      "object": "Open-sided coastal event pavilion",
+      "hint": "Web design and event-site volunteer",
+      "anchor": [
+        0.856,
+        0.405
+      ],
+      "kind": "volunteering",
+      "scene": "community"
+    },
+    {
+      "id": "community-web-design",
+      "name": "Community web design",
+      "object": "Web-design cottage with computer desks",
+      "hint": "Intermittent community web designer",
+      "anchor": [
+        0.849,
+        0.206
+      ],
+      "kind": "volunteering",
+      "scene": "community"
+    },
+    {
+      "id": "myriad",
+      "name": "Myriad Conference",
+      "object": "Glass-fronted technology conference hall",
+      "hint": "Assistant to the site manager, volunteer",
+      "anchor": [
+        0.466,
+        0.57
+      ],
+      "kind": "volunteering",
+      "scene": "community"
+    },
+    {
+      "id": "sdnx",
+      "name": "Space Development Nexus",
+      "object": "AI strategy and space-learning studio",
+      "hint": "Artificial intelligence strategy adviser, volunteer",
+      "anchor": [
+        0.792,
+        0.638
+      ],
+      "kind": "volunteering",
+      "scene": "community"
+    },
+    {
+      "id": "meals-on-wheels",
+      "name": "Meals on Wheels",
+      "object": "Meal-delivery van with insulated trays",
+      "hint": "Aged-care meal delivery volunteer",
+      "anchor": [
+        0.611,
+        0.21
+      ],
+      "kind": "volunteering",
+      "scene": "community"
     }
   ],
   "records": [
     {
-      "id": "school",
-      "type": "education",
-      "place": "grace",
-      "title": "High school, Years 8 to 12",
-      "organisation": "Grace Lutheran College",
-      "location": "Redcliffe, Queensland",
-      "dates": "Five years of high school; calendar years not supplied",
-      "sort": 1998,
-      "summary": "Attended Grace Lutheran College for all five high-school years, Years 8 to 12. Studies included Maths B, English, Religious Studies, Chemistry, Biology, Physical Education, Graphics / Technical Drawing and Technology Studies, including woodwork and metalwork.",
+      "id": "mobil-burpengary",
+      "type": "work",
+      "place": "mobil-burpengary",
+      "title": "Service station assistant",
+      "organisation": "Mobil Service Station Burpengary",
+      "location": "Burpengary, Queensland",
+      "dates": "First job; dates to confirm",
+      "sort": 1999,
+      "summary": "Stocked the drinks fridges and cleaned the toilets. Luke identifies this as his first job.",
       "sources": [
         {
-          "id": "luke20260921",
-          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
-        },
-        {
-          "id": "learning-luke",
-          "section": "Luke-authored early-adulthood account, user block 11; assistant-generated commentary excluded"
-        },
-        {
-          "id": "timeline",
-          "page": 1,
-          "section": "Top timeline, Grace Lutheran College"
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
         }
       ],
-      "note": "Luke corrected the older journal's Years 9 to 12 wording on 21 September 2026. His school years used the Years 8 to 12 high-school structure."
-    },
-    {
-      "id": "googa",
-      "type": "education",
-      "place": "googa",
-      "title": "One-month outdoor education camp",
-      "organisation": "Googa",
-      "location": "Location not stated in the supplied account",
-      "dates": "Year 10; calendar year not supplied",
-      "sort": 1998.2,
-      "summary": "Attended a one-month Googa outdoor education camp in Year 10. Luke recalls cross-country orienteering through scrub and bush using a compass, and winning the boys' division.",
-      "sources": [
-        {
-          "id": "learning-luke",
-          "section": "Luke-authored account of Year 10 Googa experience, user block 13"
-        }
-      ],
-      "note": "A school outdoor-education experience, not a separate awarded qualification."
+      "note": ""
     },
     {
       "id": "woolworths-burpengary",
@@ -434,29 +629,6 @@
         }
       ],
       "note": "Burpengary and Buderim are separate jobs in the world. The source supplies 1 January 2000 to 31 December 2001 for the combined Woolworths period, not exact transfer dates."
-    },
-    {
-      "id": "university",
-      "type": "education",
-      "place": "sunshine-coast",
-      "title": "Science studies",
-      "organisation": "University of the Sunshine Coast",
-      "location": "Location not stated",
-      "dates": "Before the Woolworths period; exact enrolment year not supplied",
-      "sort": 2000.1,
-      "summary": "Enrolled in science studies and left before the end of the first term, according to Luke's journal.",
-      "sources": [
-        {
-          "id": "learning-luke",
-          "section": "Luke-authored early-adulthood account, user block 11; assistant-generated commentary excluded"
-        },
-        {
-          "id": "timeline",
-          "page": 1,
-          "section": "Top timeline, university flags"
-        }
-      ],
-      "note": "Not completed. The journal calls the course BA Science; a formal award title has not been verified."
     },
     {
       "id": "woolworths-buderim",
@@ -525,36 +697,58 @@
       "note": "The journal calls the business Drive Safe Automotive Services; the CV and supplied work history use Drive Safe Service. The 2.5-year training duration and employment date range are reported separately."
     },
     {
-      "id": "automotive-study",
-      "type": "education",
-      "place": "tafe",
-      "title": "AUR21699 Automotive (Mechanical - Underbody)",
-      "organisation": "TAFE",
-      "location": "Caboolture, Queensland",
-      "dates": "2003",
-      "sort": 2003,
-      "summary": "Automotive underbody study with TAFE, listed by Luke under course code AUR21699. This accompanies the practical traineeship in servicing, brakes, steering, suspension, wheel alignment and balancing.",
+      "id": "uk-bar-work",
+      "type": "work",
+      "place": "uk-bar-work",
+      "title": "Temporary bar work",
+      "organisation": "Employer not yet named",
+      "location": "United Kingdom",
+      "dates": "UK working holiday, before WAAP; dates to confirm",
+      "sort": 2003.9,
+      "summary": "Temporary bar work during the UK working holiday, before the WAAP events role.",
       "sources": [
         {
-          "id": "luke20260921",
-          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
-        },
-        {
-          "id": "learning-luke",
-          "section": "Luke-authored early-adulthood account, user block 11; assistant-generated commentary excluded"
-        },
-        {
-          "id": "timeline",
-          "page": 1,
-          "section": "TAFE QLD, Cert 4 Automotive Underbody"
-        },
-        {
-          "id": "cv2024",
-          "page": 1,
-          "section": "Left sidebar, Qualifications / Licences"
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
         }
       ],
-      "note": "Luke supplied the course code and 2003 date. Older sources disagree on certificate level: the timeline says Certificate IV and the 2024 CV says Certificate II. The exact supplied course title is shown without inferring an award level."
+      "note": ""
+    },
+    {
+      "id": "tower-42",
+      "type": "work",
+      "place": "tower-42",
+      "title": "Temporary office demolition work",
+      "organisation": "Employer not yet named; Tower 42 worksite",
+      "location": "Tower 42, United Kingdom",
+      "dates": "UK working holiday, before WAAP; dates to confirm",
+      "sort": 2003.91,
+      "summary": "Temporary office demolition work at Tower 42.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
+        }
+      ],
+      "note": "Tower 42 is the named worksite, not a confirmed employer."
+    },
+    {
+      "id": "gift-card-factory",
+      "type": "work",
+      "place": "gift-card-factory",
+      "title": "Temporary gift-card factory work",
+      "organisation": "Employer not yet named",
+      "location": "United Kingdom",
+      "dates": "UK working holiday, before WAAP; dates to confirm",
+      "sort": 2003.92,
+      "summary": "Temporary work in a gift-card factory during the UK working holiday.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
+        }
+      ],
+      "note": "Specific factory duties have not yet been supplied."
     },
     {
       "id": "waap",
@@ -587,6 +781,60 @@
       "end": "2004-11-13"
     },
     {
+      "id": "uk-storage-marquees",
+      "type": "work",
+      "place": "uk-storage-marquees",
+      "title": "Temporary storage marquee installations",
+      "organisation": "Employer not yet named; Sainsbury's and Tesco client sites",
+      "location": "United Kingdom",
+      "dates": "UK working holiday; dates to confirm",
+      "sort": 2004.7,
+      "summary": "Installed temporary storage marquees at Sainsbury's and Tesco sites.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
+        }
+      ],
+      "note": "Sainsbury's and Tesco are the named client sites. Employer, dates and individual assignments are still to confirm."
+    },
+    {
+      "id": "horse-stables",
+      "type": "work",
+      "place": "horse-stables",
+      "title": "Temporary horse stable installations",
+      "organisation": "Employer not yet named",
+      "location": "United Kingdom",
+      "dates": "UK working holiday; dates to confirm",
+      "sort": 2004.8,
+      "summary": "Installed temporary horse stables during the UK working holiday.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "sheet-metal-roofing",
+      "type": "work",
+      "place": "sheet-metal-roofing",
+      "title": "Trade assistant to a sheet-metal roofer",
+      "organisation": "Employer not yet named",
+      "location": "Australia",
+      "dates": "After returning from the UK; dates to confirm",
+      "sort": 2004.95,
+      "summary": "Trade assistant work with a sheet-metal roofer after returning to Australia.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
+        }
+      ],
+      "note": ""
+    },
+    {
       "id": "moreton",
       "type": "work",
       "place": "moreton",
@@ -615,6 +863,24 @@
       "note": "Dates updated from Luke's direct work-history details supplied on 21 September 2026, replacing the older CV or timeline wording.",
       "start": "2005-01-01",
       "end": "2005-06-30"
+    },
+    {
+      "id": "shopfitting",
+      "type": "work",
+      "place": "shopfitting",
+      "title": "Intermittent shopfitting trade assistant",
+      "organisation": "Employer not yet named",
+      "location": "Australia",
+      "dates": "Intermittently between other jobs; periods to confirm",
+      "sort": 2005.05,
+      "summary": "Worked as a trade assistant to a shopfitter with his father's cousin at different times between other jobs.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
+        }
+      ],
+      "note": "This is a recurring role, not a single confirmed continuous employment period."
     },
     {
       "id": "queensland-rail",
@@ -647,30 +913,6 @@
       "end": "2006-01-01"
     },
     {
-      "id": "rail-training",
-      "type": "education",
-      "place": "training-records",
-      "title": "HR truck licence, heights and first aid training",
-      "organisation": "Recorded with Queensland Rail employment",
-      "location": "Brisbane",
-      "dates": "2005 and 2006 employment period",
-      "sort": 2005.6,
-      "summary": "HR truck licence, work at heights, senior first aid and CPR are recorded with the rail apprenticeship.",
-      "sources": [
-        {
-          "id": "cv2024",
-          "page": 1,
-          "section": "Right panel, Queensland Rail"
-        },
-        {
-          "id": "timeline",
-          "page": 1,
-          "section": "HR Truck Drivers Licence"
-        }
-      ],
-      "note": "Historical record only. Current licence and training validity have not been verified."
-    },
-    {
       "id": "skystar",
       "type": "work",
       "place": "skystar",
@@ -700,28 +942,58 @@
       "end": "2007-06-30"
     },
     {
-      "id": "asic",
-      "type": "education",
-      "place": "training-records",
-      "title": "ASIC security clearance and airside training",
-      "organisation": "Recorded with Skystar Airport Services",
-      "location": "Darwin",
-      "dates": "2006 and 2007 employment period",
+      "id": "darwin-semi-trailers",
+      "type": "work",
+      "place": "darwin-semi-trailers",
+      "title": "Trade assistant to a semi-trailer mechanic",
+      "organisation": "Employer not yet named",
+      "location": "Darwin, Northern Territory",
+      "dates": "Darwin period; dates to confirm",
       "sort": 2006.1,
-      "summary": "The CV records ASIC clearance; the timeline adds other airside services training.",
+      "summary": "Trade assistant work with a semi-trailer mechanic in Darwin.",
       "sources": [
         {
-          "id": "cv2024",
-          "page": 1,
-          "section": "Right panel, Skystar Airport Services"
-        },
-        {
-          "id": "timeline",
-          "page": 1,
-          "section": "ASIC Security Clearance"
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
         }
       ],
-      "note": "Historical clearance, not a claim of current validity."
+      "note": ""
+    },
+    {
+      "id": "ace-tree-services",
+      "type": "work",
+      "place": "ace-tree-services",
+      "title": "Ground crew and truck driver",
+      "organisation": "ACE Treelopping Services",
+      "location": "Darwin, Northern Territory",
+      "dates": "Darwin period; dates to confirm",
+      "sort": 2006.2,
+      "summary": "Ground crew and truck driving for ACE Treelopping Services in Darwin.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "hume-concrete",
+      "type": "work",
+      "place": "hume-concrete",
+      "title": "Skilled labourer, welding precast concrete culverts",
+      "organisation": "Hume Concrete",
+      "location": "Darwin, Northern Territory",
+      "dates": "Darwin period; dates to confirm",
+      "sort": 2006.3,
+      "summary": "Skilled labour at Hume Concrete in Darwin, welding precast concrete culverts.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "Additional jobs supplied by Luke"
+        }
+      ],
+      "note": ""
     },
     {
       "id": "ausblast",
@@ -782,34 +1054,6 @@
       "end": "2009-01-31"
     },
     {
-      "id": "neis",
-      "type": "education",
-      "place": "sarina",
-      "title": "BSB40401 Business (Small Business Management)",
-      "organisation": "Sarina Russo",
-      "location": "Caboolture, Queensland",
-      "dates": "2008",
-      "sort": 2008.1,
-      "summary": "Small business management study at Sarina Russo. Luke identifies 2008 as the year he taught himself website design.",
-      "sources": [
-        {
-          "id": "luke20260921",
-          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
-        },
-        {
-          "id": "timeline",
-          "page": 1,
-          "section": "Bottom timeline, NEIS Sarina Russo"
-        },
-        {
-          "id": "cv2024",
-          "page": 1,
-          "section": "Left sidebar, Qualifications / Licences"
-        }
-      ],
-      "note": "The course code and year come from Luke's supplied education details. The earlier timeline identifies NEIS and describes Certificate IV small business establishment and management."
-    },
-    {
       "id": "kirby",
       "type": "work",
       "place": "kirby",
@@ -846,6 +1090,313 @@
         }
       ],
       "note": "Dates are approximate readings of the timeline, not confirmed employment dates."
+    },
+    {
+      "id": "owner-builder",
+      "type": "work",
+      "place": "owner-builder",
+      "title": "General labourer",
+      "organisation": "Owner builder",
+      "location": "Amity Point, Queensland",
+      "dates": "Around 2013 to 2014",
+      "sort": 2013,
+      "summary": "General labouring for an owner builder in Amity Point, as listed in the earlier timeline.",
+      "sources": [
+        {
+          "id": "timeline",
+          "page": 2,
+          "section": "Top and middle timelines, Owner Builder"
+        }
+      ],
+      "note": "The source does not name an employer or give exact dates."
+    },
+    {
+      "id": "maringa",
+      "type": "work",
+      "place": "maringa",
+      "title": "Web designer and administration",
+      "organisation": "Maringa Farm",
+      "location": "Kingaroy, Queensland",
+      "dates": "Around 2014",
+      "sort": 2014,
+      "summary": "Web design and administration at Maringa Farm, recorded as a work role in the earlier timeline.",
+      "sources": [
+        {
+          "id": "timeline",
+          "page": 2,
+          "section": "Top and middle timelines, Maringa Farm"
+        }
+      ],
+      "note": "Exact dates and employment arrangement are not supplied."
+    },
+    {
+      "id": "americold",
+      "type": "work",
+      "place": "americold",
+      "title": "Frozen food distribution warehouse picker and packer",
+      "organisation": "Labourforce Labour Hire and Americold Logistics",
+      "location": "Location not stated",
+      "dates": "1 January to 1 March 2020",
+      "sort": 2020,
+      "summary": "Picking and packing pallets of frozen food for Woolworths stores.",
+      "sources": [
+        {
+          "id": "luke20260921",
+          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
+        },
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Left panel, Frozen Food Distribution"
+        }
+      ],
+      "start": "2020-01-01",
+      "end": "2020-03-01"
+    },
+    {
+      "id": "qa",
+      "type": "work",
+      "place": "qa",
+      "title": "Outbound call centre computer-aided phone interviewer",
+      "organisation": "Q & A Market Research Services Pty Ltd",
+      "location": "Location not stated",
+      "dates": "21 February to 21 May 2022",
+      "sort": 2022.2,
+      "summary": "Telephone interviewing for political polls and market research.",
+      "sources": [
+        {
+          "id": "luke20260921",
+          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
+        },
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Left panel, Outbound Call Centre"
+        }
+      ],
+      "start": "2022-02-21",
+      "end": "2022-05-21"
+    },
+    {
+      "id": "yorke",
+      "type": "work",
+      "place": "yorke",
+      "title": "Skilled construction labourer and forklift driver",
+      "organisation": "Yorke Consulting",
+      "location": "Commercial and industrial sites; Aldi Keperra refurbishment",
+      "dates": "2 September to 1 December 2022",
+      "sort": 2022.9,
+      "summary": "Skilled construction labouring and forklift driving across commercial and industrial worksites, usually with McNab. Also worked on an Aldi shutdown in Keperra with Mainbrace Constructions. This role ended in December 2022.",
+      "sources": [
+        {
+          "id": "luke20260921",
+          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
+        },
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Left panel, Skilled Construction Laborer & Forklift Driver"
+        }
+      ],
+      "note": "Dates updated from Luke's direct work-history details supplied on 21 September 2026, replacing the older CV or timeline wording.",
+      "start": "2022-09-02",
+      "end": "2022-12-01"
+    },
+    {
+      "id": "prompt-research",
+      "type": "work",
+      "place": "prompt-research",
+      "title": "Prompt engineer and generative AI researcher",
+      "organisation": "Self-directed generative artificial intelligence research",
+      "location": "Location not specified",
+      "dates": "9 December 2022 to present, confirmed by Luke in September 2026",
+      "start": "2022-12-09",
+      "end": null,
+      "sort": 2022.99,
+      "summary": "Self-directed research into using generative AI for documents, presentations, websites, creative writing, research, images, video, music and code. Luke reports more than two million words of conversation and code exchange with OpenAI models.",
+      "sources": [
+        {
+          "id": "luke20260921",
+          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
+        }
+      ],
+      "note": "Self-directed research, not employment by OpenAI or another AI vendor. The reported volume is Luke's own account. Startup ventures are a separate, deferred chapter."
+    },
+    {
+      "id": "school",
+      "type": "education",
+      "place": "grace",
+      "title": "High school, Years 8 to 12",
+      "organisation": "Grace Lutheran College",
+      "location": "Redcliffe, Queensland",
+      "dates": "Five years of high school; calendar years not supplied",
+      "sort": 1998,
+      "summary": "Attended Grace Lutheran College for all five high-school years, Years 8 to 12. Studies included Maths B, English, Religious Studies, Chemistry, Biology, Physical Education, Graphics / Technical Drawing and Technology Studies, including woodwork and metalwork.",
+      "sources": [
+        {
+          "id": "luke20260921",
+          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
+        },
+        {
+          "id": "learning-luke",
+          "section": "Luke-authored early-adulthood account, user block 11; assistant-generated commentary excluded"
+        },
+        {
+          "id": "timeline",
+          "page": 1,
+          "section": "Top timeline, Grace Lutheran College"
+        }
+      ],
+      "note": "Luke corrected the older journal's Years 9 to 12 wording on 21 September 2026. His school years used the Years 8 to 12 high-school structure."
+    },
+    {
+      "id": "googa",
+      "type": "education",
+      "place": "googa",
+      "title": "One-month outdoor education camp",
+      "organisation": "Googa",
+      "location": "Location not stated in the supplied account",
+      "dates": "Year 10; calendar year not supplied",
+      "sort": 1998.2,
+      "summary": "Attended a one-month Googa outdoor education camp in Year 10. Luke recalls cross-country orienteering through scrub and bush using a compass, and winning the boys' division.",
+      "sources": [
+        {
+          "id": "learning-luke",
+          "section": "Luke-authored account of Year 10 Googa experience, user block 13"
+        }
+      ],
+      "note": "A school outdoor-education experience, not a separate awarded qualification."
+    },
+    {
+      "id": "university",
+      "type": "education",
+      "place": "sunshine-coast",
+      "title": "Science studies",
+      "organisation": "University of the Sunshine Coast",
+      "location": "Location not stated",
+      "dates": "Before the Woolworths period; exact enrolment year not supplied",
+      "sort": 2000.1,
+      "summary": "Enrolled in science studies and left before the end of the first term, according to Luke's journal.",
+      "sources": [
+        {
+          "id": "learning-luke",
+          "section": "Luke-authored early-adulthood account, user block 11; assistant-generated commentary excluded"
+        },
+        {
+          "id": "timeline",
+          "page": 1,
+          "section": "Top timeline, university flags"
+        }
+      ],
+      "note": "Not completed. The journal calls the course BA Science; a formal award title has not been verified."
+    },
+    {
+      "id": "automotive-study",
+      "type": "education",
+      "place": "tafe",
+      "title": "AUR21699 Automotive (Mechanical - Underbody)",
+      "organisation": "TAFE",
+      "location": "Caboolture, Queensland",
+      "dates": "2003",
+      "sort": 2003,
+      "summary": "Automotive underbody study with TAFE, listed by Luke under course code AUR21699. This accompanies the practical traineeship in servicing, brakes, steering, suspension, wheel alignment and balancing.",
+      "sources": [
+        {
+          "id": "luke20260921",
+          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
+        },
+        {
+          "id": "learning-luke",
+          "section": "Luke-authored early-adulthood account, user block 11; assistant-generated commentary excluded"
+        },
+        {
+          "id": "timeline",
+          "page": 1,
+          "section": "TAFE QLD, Cert 4 Automotive Underbody"
+        },
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Left sidebar, Qualifications / Licences"
+        }
+      ],
+      "note": "Luke supplied the course code and 2003 date. Older sources disagree on certificate level: the timeline says Certificate IV and the 2024 CV says Certificate II. The exact supplied course title is shown without inferring an award level."
+    },
+    {
+      "id": "rail-training",
+      "type": "education",
+      "place": "training-records",
+      "title": "HR truck licence, heights and first aid training",
+      "organisation": "Recorded with Queensland Rail employment",
+      "location": "Brisbane",
+      "dates": "2005 and 2006 employment period",
+      "sort": 2005.6,
+      "summary": "HR truck licence, work at heights, senior first aid and CPR are recorded with the rail apprenticeship.",
+      "sources": [
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Right panel, Queensland Rail"
+        },
+        {
+          "id": "timeline",
+          "page": 1,
+          "section": "HR Truck Drivers Licence"
+        }
+      ],
+      "note": "Historical record only. Current licence and training validity have not been verified."
+    },
+    {
+      "id": "asic",
+      "type": "education",
+      "place": "training-records",
+      "title": "ASIC security clearance and airside training",
+      "organisation": "Recorded with Skystar Airport Services",
+      "location": "Darwin",
+      "dates": "2006 and 2007 employment period",
+      "sort": 2006.1,
+      "summary": "The CV records ASIC clearance; the timeline adds other airside services training.",
+      "sources": [
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Right panel, Skystar Airport Services"
+        },
+        {
+          "id": "timeline",
+          "page": 1,
+          "section": "ASIC Security Clearance"
+        }
+      ],
+      "note": "Historical clearance, not a claim of current validity."
+    },
+    {
+      "id": "neis",
+      "type": "education",
+      "place": "sarina",
+      "title": "BSB40401 Business (Small Business Management)",
+      "organisation": "Sarina Russo",
+      "location": "Caboolture, Queensland",
+      "dates": "2008",
+      "sort": 2008.1,
+      "summary": "Small business management study at Sarina Russo. Luke identifies 2008 as the year he taught himself website design.",
+      "sources": [
+        {
+          "id": "luke20260921",
+          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
+        },
+        {
+          "id": "timeline",
+          "page": 1,
+          "section": "Bottom timeline, NEIS Sarina Russo"
+        },
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Left sidebar, Qualifications / Licences"
+        }
+      ],
+      "note": "The course code and year come from Luke's supplied education details. The earlier timeline identifies NEIS and describes Certificate IV small business establishment and management."
     },
     {
       "id": "nlp",
@@ -938,44 +1489,6 @@
       "note": "Dates follow Luke's latest account rather than the older approximate timeline. Personal study, not a legal qualification. The older graphic spells its website label COMMLAW.GOV.AU."
     },
     {
-      "id": "owner-builder",
-      "type": "work",
-      "place": "owner-builder",
-      "title": "General labourer",
-      "organisation": "Owner builder",
-      "location": "Amity Point, Queensland",
-      "dates": "Around 2013 to 2014",
-      "sort": 2013,
-      "summary": "General labouring for an owner builder in Amity Point, as listed in the earlier timeline.",
-      "sources": [
-        {
-          "id": "timeline",
-          "page": 2,
-          "section": "Top and middle timelines, Owner Builder"
-        }
-      ],
-      "note": "The source does not name an employer or give exact dates."
-    },
-    {
-      "id": "maringa",
-      "type": "work",
-      "place": "maringa",
-      "title": "Web designer and administration",
-      "organisation": "Maringa Farm",
-      "location": "Kingaroy, Queensland",
-      "dates": "Around 2014",
-      "sort": 2014,
-      "summary": "Web design and administration at Maringa Farm, recorded as a work role in the earlier timeline.",
-      "sources": [
-        {
-          "id": "timeline",
-          "page": 2,
-          "section": "Top and middle timelines, Maringa Farm"
-        }
-      ],
-      "note": "Exact dates and employment arrangement are not supplied."
-    },
-    {
       "id": "evocca",
       "type": "education",
       "place": "evocca",
@@ -998,30 +1511,6 @@
         }
       ],
       "note": "Not completed."
-    },
-    {
-      "id": "americold",
-      "type": "work",
-      "place": "americold",
-      "title": "Frozen food distribution warehouse picker and packer",
-      "organisation": "Labourforce Labour Hire and Americold Logistics",
-      "location": "Location not stated",
-      "dates": "1 January to 1 March 2020",
-      "sort": 2020,
-      "summary": "Picking and packing pallets of frozen food for Woolworths stores.",
-      "sources": [
-        {
-          "id": "luke20260921",
-          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
-        },
-        {
-          "id": "cv2024",
-          "page": 1,
-          "section": "Left panel, Frozen Food Distribution"
-        }
-      ],
-      "start": "2020-01-01",
-      "end": "2020-03-01"
     },
     {
       "id": "cyber",
@@ -1047,75 +1536,6 @@
       "note": "Study stopped; not listed as a completed qualification."
     },
     {
-      "id": "qa",
-      "type": "work",
-      "place": "qa",
-      "title": "Outbound call centre computer-aided phone interviewer",
-      "organisation": "Q & A Market Research Services Pty Ltd",
-      "location": "Location not stated",
-      "dates": "21 February to 21 May 2022",
-      "sort": 2022.2,
-      "summary": "Telephone interviewing for political polls and market research.",
-      "sources": [
-        {
-          "id": "luke20260921",
-          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
-        },
-        {
-          "id": "cv2024",
-          "page": 1,
-          "section": "Left panel, Outbound Call Centre"
-        }
-      ],
-      "start": "2022-02-21",
-      "end": "2022-05-21"
-    },
-    {
-      "id": "yorke",
-      "type": "work",
-      "place": "yorke",
-      "title": "Skilled construction labourer and forklift driver",
-      "organisation": "Yorke Consulting",
-      "location": "Commercial and industrial sites; Aldi Keperra refurbishment",
-      "dates": "2 September to 1 December 2022",
-      "sort": 2022.9,
-      "summary": "Skilled construction labouring and forklift driving across commercial and industrial worksites, usually with McNab. Also worked on an Aldi shutdown in Keperra with Mainbrace Constructions. This role ended in December 2022.",
-      "sources": [
-        {
-          "id": "luke20260921",
-          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
-        },
-        {
-          "id": "cv2024",
-          "page": 1,
-          "section": "Left panel, Skilled Construction Laborer & Forklift Driver"
-        }
-      ],
-      "note": "Dates updated from Luke's direct work-history details supplied on 21 September 2026, replacing the older CV or timeline wording.",
-      "start": "2022-09-02",
-      "end": "2022-12-01"
-    },
-    {
-      "id": "prompt-research",
-      "type": "work",
-      "place": "prompt-research",
-      "title": "Prompt engineer and generative AI researcher",
-      "organisation": "Self-directed generative artificial intelligence research",
-      "location": "Location not specified",
-      "dates": "9 December 2022 to present, confirmed by Luke in September 2026",
-      "start": "2022-12-09",
-      "end": null,
-      "sort": 2022.99,
-      "summary": "Self-directed research into using generative AI for documents, presentations, websites, creative writing, research, images, video, music and code. Luke reports more than two million words of conversation and code exchange with OpenAI models.",
-      "sources": [
-        {
-          "id": "luke20260921",
-          "section": "Work-history and education details supplied directly by Luke on 21 September 2026"
-        }
-      ],
-      "note": "Self-directed research, not employment by OpenAI or another AI vendor. The reported volume is Luke's own account. Startup ventures are a separate, deferred chapter."
-    },
-    {
       "id": "licences",
       "type": "education",
       "place": "training-records",
@@ -1133,18 +1553,215 @@
         }
       ],
       "note": "A historical inventory only. Current validity, issuing bodies and the exact scope of each ticket require confirmation."
+    },
+    {
+      "id": "museum-volunteering",
+      "type": "volunteering",
+      "place": "museum-volunteering",
+      "title": "Oral history transcription volunteer",
+      "organisation": "North Stradbroke Island Historical Museum",
+      "location": "Dunwich, Minjerribah / North Stradbroke Island",
+      "dates": "2014",
+      "sort": 2014,
+      "summary": "Transcribed recorded oral histories for the North Stradbroke Island Historical Museum.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "Museum volunteering and full organisation name"
+        },
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Right panel, Volunteering"
+        },
+        {
+          "id": "timeline",
+          "page": 2,
+          "section": "Blue history track, aural history transcription"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "island-vibe",
+      "type": "volunteering",
+      "place": "island-vibe",
+      "title": "Festival setup and site-management volunteer",
+      "organisation": "Island Vibe Music Festival",
+      "location": "Minjerribah / North Stradbroke Island",
+      "dates": "2014 to 2016, separate festival years",
+      "sort": 2014.1,
+      "summary": "Helped set up Island Vibe, assisted the site manager and took part in a mentorship programme.",
+      "sources": [
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Right panel, Volunteering"
+        },
+        {
+          "id": "timeline",
+          "page": 2,
+          "section": "Island Vibe 2014 mentorship and 2015 volunteering flags"
+        },
+        {
+          "id": "learning-luke",
+          "section": "Luke-authored festival setup account, user block discussing Island Vibe in 2014; unrelated personal reflection excluded"
+        }
+      ],
+      "note": "Separate festival years are recorded; this does not describe continuous employment."
+    },
+    {
+      "id": "quandamooka-festival",
+      "type": "volunteering",
+      "place": "quandamooka-festival",
+      "title": "Web design and event-site volunteer",
+      "organisation": "Quandamooka Festival",
+      "location": "Minjerribah / North Stradbroke Island",
+      "dates": "2015 to 2016",
+      "sort": 2015,
+      "summary": "Web design and site assistance at multiple Quandamooka Festival events.",
+      "sources": [
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Right panel, Volunteering"
+        }
+      ],
+      "note": "The festival work is included here once. The broader community web-design role lists the other projects separately."
+    },
+    {
+      "id": "community-web-design",
+      "type": "volunteering",
+      "place": "community-web-design",
+      "title": "Intermittent community web designer",
+      "organisation": "Sustainable Dreaming and Kaumaakonga",
+      "location": "Location not stated",
+      "dates": "From 2015; recorded as current in the 2024 CV",
+      "sort": 2015.1,
+      "summary": "Intermittent, mostly volunteer web design for Sustainable Dreaming and Kaumaakonga.",
+      "sources": [
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Left panel, Work Experience, web design role"
+        }
+      ],
+      "note": "The source groups these projects in one recurring web-design role, alongside Quandamooka Festival. Festival work is listed separately above. Ongoing status in 2026 is not yet confirmed; the source says mostly volunteer, not exclusively unpaid."
+    },
+    {
+      "id": "myriad",
+      "type": "volunteering",
+      "place": "myriad",
+      "title": "Assistant to the site manager, volunteer",
+      "organisation": "Myriad Technology Conference",
+      "location": "Brisbane Powerhouse, Queensland",
+      "dates": "2017",
+      "sort": 2017,
+      "summary": "Volunteered as assistant to the site manager for the Myriad Technology Conference at Brisbane Powerhouse.",
+      "sources": [
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Right panel, Volunteering"
+        },
+        {
+          "id": "timeline",
+          "page": 2,
+          "section": "Myriad 2017 volunteering flag"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "sdnx",
+      "type": "volunteering",
+      "place": "sdnx",
+      "title": "Artificial intelligence strategy adviser, volunteer",
+      "organisation": "Space Development Nexus (SDNx)",
+      "location": "India",
+      "dates": "2019 to present, during visits to India",
+      "sort": 2019,
+      "summary": "Ongoing volunteer artificial intelligence strategy advice for Space Development Nexus, beginning in 2019 and continuing each time Luke visits India.",
+      "sources": [
+        {
+          "id": "luke-additions-20260921",
+          "section": "SDNx began in 2019 and remains ongoing each time Luke visits India"
+        },
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Right panel, Volunteering"
+        }
+      ],
+      "note": "Luke's direct clarification supersedes the older CV's dates. This describes recurring volunteering during visits, not continuous residence in India."
+    },
+    {
+      "id": "meals-on-wheels",
+      "type": "volunteering",
+      "place": "meals-on-wheels",
+      "title": "Aged-care meal delivery volunteer",
+      "organisation": "Meals on Wheels",
+      "location": "Brisbane North, Queensland",
+      "dates": "2021",
+      "sort": 2021,
+      "summary": "Delivered meals for aged-care recipients with Meals on Wheels in Brisbane North.",
+      "sources": [
+        {
+          "id": "cv2024",
+          "page": 1,
+          "section": "Right panel, Volunteering"
+        }
+      ],
+      "note": ""
     }
   ],
   "scenes": [
     {
       "id": "work",
       "name": "Work harbour",
-      "image": "./assets/harbour-world.png"
+      "image": "./assets/harbour-world.png",
+      "heading": "A working life.\nA world to explore.",
+      "routeLabel": "Every job has its own place"
+    },
+    {
+      "id": "uk",
+      "name": "UK working holiday",
+      "image": "./assets/uk-working-holiday.png",
+      "heading": "A working\nholiday.",
+      "routeLabel": "Temporary jobs, each with its own place"
+    },
+    {
+      "id": "trades",
+      "name": "Australian trades",
+      "image": "./assets/australian-trades.png",
+      "heading": "First jobs.\nHands-on trades.",
+      "routeLabel": "From the first job to the workshop floor"
     },
     {
       "id": "education",
       "name": "Learning village",
-      "image": "./assets/learning-village.png"
+      "image": "./assets/learning-village.png",
+      "heading": "A lifetime\nof learning.",
+      "routeLabel": "A building for each educator"
+    },
+    {
+      "id": "community",
+      "name": "Volunteering",
+      "image": "./assets/community-volunteering.png",
+      "heading": "Time given.\nCommunity built.",
+      "routeLabel": "Volunteering and community work"
+    }
+  ],
+  "unresolved": [
+    {
+      "topic": "My Recovery Disaster Resilience Event",
+      "known": "Event organiser in Brisbane, shown on the older timeline.",
+      "source": {
+        "id": "timeline",
+        "page": 2,
+        "section": "My Recovery Disaster Resilience Event"
+      },
+      "needs": "Confirm dates and whether this was volunteering, paid work or a personal project before placing it in a category."
     }
   ]
 }
