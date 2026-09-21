@@ -1,0 +1,7 @@
+# Harbour concept artwork
+
+Created 21 September 2026 using the built-in image-generation tool. Final asset: public/assets/harbour-concept.png. Used first on the public holding page, then retained in About this world. This is fictional concept art, not a photograph of any workplace.
+
+## Final prompt
+
+Use case: stylized-concept. Asset type: landscape website holding-page hero artwork. Create a rich playful miniature 3D story world of a person's documented work and education: an Australian coastal working harbour built like a handcrafted architectural diorama. One connected little island with a red-roof automotive workshop, a short railway with a yellow maintenance train and overhead power poles, a small airport apron and passenger aircraft, colourful open-air festival stage, warehouse with pallets and delivery truck, a building under construction with a crane, and a quiet learning pavilion with oversized books. These are fictional metaphors for real career chapters, not literal workplaces. Warm terracotta, butter yellow, eucalyptus green and deep blue water; beautiful soft golden-hour light, tactile clay and painted timber, charming high-detail modelmaking, sophisticated editorial composition. Wide 1536x1024 composition; island fills central and right area, deep teal water and sky at left suitable for cream title text added later in HTML. No text, no lettering, no logos, no portrait, no watermark. This will become a navigable browser world. Make the miniature feel inviting to explore.
