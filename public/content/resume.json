@@ -53,7 +53,13 @@
         0.08464,
         0.4043
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.022786,
+        0.348633,
+        0.141927,
+        0.441406
+      ]
     },
     {
       "id": "woolworths-burpengary",
@@ -64,7 +70,13 @@
         0.1862,
         0.41016
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.142578,
+        0.365234,
+        0.22526,
+        0.454102
+      ]
     },
     {
       "id": "woolworths-buderim",
@@ -75,7 +87,13 @@
         0.41504
       ],
       "kind": "work",
-      "hint": "Perishables assistant"
+      "hint": "Perishables assistant",
+      "hitbox": [
+        0.229167,
+        0.371094,
+        0.311198,
+        0.456055
+      ]
     },
     {
       "id": "drive-safe",
@@ -86,7 +104,13 @@
         0.39323,
         0.4082
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.324219,
+        0.360352,
+        0.455729,
+        0.460938
+      ]
     },
     {
       "id": "uk-bar-work",
@@ -97,7 +121,13 @@
         0.09961,
         0.29492
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.052083,
+        0.242188,
+        0.153646,
+        0.338867
+      ]
     },
     {
       "id": "tower-42",
@@ -108,7 +138,13 @@
         0.15299,
         0.11719
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.119141,
+        0.011719,
+        0.177734,
+        0.224609
+      ]
     },
     {
       "id": "gift-card-factory",
@@ -119,7 +155,13 @@
         0.21094,
         0.29688
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.164063,
+        0.249023,
+        0.253255,
+        0.34082
+      ]
     },
     {
       "id": "waap",
@@ -130,7 +172,13 @@
         0.51888,
         0.40918
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.46875,
+        0.362305,
+        0.570964,
+        0.460938
+      ]
     },
     {
       "id": "uk-storage-marquees",
@@ -141,7 +189,13 @@
         0.29362,
         0.29199
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.254557,
+        0.245117,
+        0.334635,
+        0.341797
+      ]
     },
     {
       "id": "horse-stables",
@@ -152,7 +206,13 @@
         0.39779,
         0.29883
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.33724,
+        0.245117,
+        0.45638,
+        0.344727
+      ]
     },
     {
       "id": "sheet-metal-roofing",
@@ -163,7 +223,13 @@
         0.5013,
         0.30176
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.458333,
+        0.245117,
+        0.535156,
+        0.348633
+      ]
     },
     {
       "id": "moreton",
@@ -174,7 +240,13 @@
         0.61133,
         0.43164
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.578776,
+        0.391602,
+        0.647135,
+        0.473633
+      ]
     },
     {
       "id": "shopfitting",
@@ -185,7 +257,13 @@
         0.58073,
         0.3125
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.53776,
+        0.270508,
+        0.634115,
+        0.350586
+      ]
     },
     {
       "id": "queensland-rail",
@@ -196,7 +274,13 @@
         0.11914,
         0.61914
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.048828,
+        0.573242,
+        0.205729,
+        0.662109
+      ]
     },
     {
       "id": "skystar",
@@ -207,7 +291,13 @@
         0.70833,
         0.17285
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.647135,
+        0.092773,
+        0.789063,
+        0.219727
+      ]
     },
     {
       "id": "darwin-semi-trailers",
@@ -218,7 +308,13 @@
         0.6901,
         0.3125
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.641276,
+        0.254883,
+        0.753906,
+        0.352539
+      ]
     },
     {
       "id": "ace-tree-services",
@@ -229,7 +325,13 @@
         0.27995,
         0.64844
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.236979,
+        0.615234,
+        0.328776,
+        0.677734
+      ]
     },
     {
       "id": "hume-concrete",
@@ -240,7 +342,13 @@
         0.78906,
         0.32227
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.758464,
+        0.273438,
+        0.849609,
+        0.352539
+      ]
     },
     {
       "id": "ausblast",
@@ -251,7 +359,13 @@
         0.38281,
         0.66406
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.340495,
+        0.62793,
+        0.429688,
+        0.691406
+      ]
     },
     {
       "id": "australia-post",
@@ -262,7 +376,13 @@
         0.46354,
         0.67578
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.436849,
+        0.649414,
+        0.489583,
+        0.704102
+      ]
     },
     {
       "id": "kirby",
@@ -273,7 +393,13 @@
         0.52799,
         0.68555
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.500651,
+        0.65625,
+        0.565755,
+        0.716797
+      ]
     },
     {
       "id": "viande",
@@ -284,7 +410,13 @@
         0.62826,
         0.68359
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.582682,
+        0.638672,
+        0.66862,
+        0.723633
+      ]
     },
     {
       "id": "owner-builder",
@@ -295,7 +427,13 @@
         0.82357,
         0.1875
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.791016,
+        0.124023,
+        0.865234,
+        0.223633
+      ]
     },
     {
       "id": "maringa",
@@ -306,7 +444,13 @@
         0.79883,
         0.43457
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.76237,
+        0.397461,
+        0.847005,
+        0.479492
+      ]
     },
     {
       "id": "americold",
@@ -317,7 +461,13 @@
         0.90495,
         0.30273
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.852214,
+        0.239258,
+        0.967448,
+        0.350586
+      ]
     },
     {
       "id": "qa",
@@ -328,7 +478,13 @@
         0.70833,
         0.42188
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.65625,
+        0.375,
+        0.759115,
+        0.469727
+      ]
     },
     {
       "id": "yorke",
@@ -339,7 +495,13 @@
         0.90951,
         0.17578
       ],
-      "kind": "work"
+      "kind": "work",
+      "hitbox": [
+        0.86849,
+        0.103516,
+        0.96224,
+        0.231445
+      ]
     },
     {
       "id": "prompt-research",
@@ -350,7 +512,13 @@
         0.41406
       ],
       "kind": "work",
-      "hint": "Prompt engineer and generative AI researcher"
+      "hint": "Prompt engineer and generative AI researcher",
+      "hitbox": [
+        0.86263,
+        0.374023,
+        0.959635,
+        0.472656
+      ]
     },
     {
       "id": "grace",
@@ -361,7 +529,13 @@
         0.16602
       ],
       "kind": "education",
-      "hint": "Education and training at Grace Lutheran College"
+      "hint": "Education and training at Grace Lutheran College",
+      "hitbox": [
+        0.200521,
+        0.108398,
+        0.302083,
+        0.208984
+      ]
     },
     {
       "id": "googa",
@@ -372,7 +546,13 @@
         0.19238
       ],
       "kind": "education",
-      "hint": "Education and training at Googa"
+      "hint": "Education and training at Googa",
+      "hitbox": [
+        0.570313,
+        0.150391,
+        0.650391,
+        0.231445
+      ]
     },
     {
       "id": "sunshine-coast",
@@ -383,7 +563,13 @@
         0.16309
       ],
       "kind": "education",
-      "hint": "Education and training at University of the Sunshine Coast"
+      "hint": "Education and training at University of the Sunshine Coast",
+      "hitbox": [
+        0.309245,
+        0.099609,
+        0.396484,
+        0.208008
+      ]
     },
     {
       "id": "tafe",
@@ -394,7 +580,13 @@
         0.16504
       ],
       "kind": "education",
-      "hint": "Education and training at TAFE"
+      "hint": "Education and training at TAFE",
+      "hitbox": [
+        0.404948,
+        0.119141,
+        0.492188,
+        0.214844
+      ]
     },
     {
       "id": "training-records",
@@ -405,7 +597,13 @@
         0.58203
       ],
       "kind": "education",
-      "hint": "Historical tickets with issuing educators not identified"
+      "hint": "Historical tickets with issuing educators not identified",
+      "hitbox": [
+        0.455729,
+        0.537109,
+        0.53125,
+        0.617188
+      ]
     },
     {
       "id": "sarina",
@@ -416,7 +614,13 @@
         0.18359
       ],
       "kind": "education",
-      "hint": "Education and training at Sarina Russo"
+      "hint": "Education and training at Sarina Russo",
+      "hitbox": [
+        0.480469,
+        0.141602,
+        0.565104,
+        0.226563
+      ]
     },
     {
       "id": "christopher-howard",
@@ -427,7 +631,13 @@
         0.52539
       ],
       "kind": "education",
-      "hint": "Education and training at Christopher Howard Training"
+      "hint": "Education and training at Christopher Howard Training",
+      "hitbox": [
+        0.042318,
+        0.46875,
+        0.145833,
+        0.571289
+      ]
     },
     {
       "id": "itunes-university",
@@ -438,7 +648,13 @@
         0.54199
       ],
       "kind": "education",
-      "hint": "Learning platform and informal study"
+      "hint": "Learning platform and informal study",
+      "hitbox": [
+        0.25,
+        0.487305,
+        0.358073,
+        0.600586
+      ]
     },
     {
       "id": "self-study",
@@ -449,7 +665,13 @@
         0.5625
       ],
       "kind": "education",
-      "hint": "Self-directed learning; no awarded qualification claimed"
+      "hint": "Self-directed learning; no awarded qualification claimed",
+      "hitbox": [
+        0.364583,
+        0.517578,
+        0.453125,
+        0.605469
+      ]
     },
     {
       "id": "evocca",
@@ -460,7 +682,13 @@
         0.53223
       ],
       "kind": "education",
-      "hint": "Education and training at Evocca"
+      "hint": "Education and training at Evocca",
+      "hitbox": [
+        0.150391,
+        0.487305,
+        0.248047,
+        0.585938
+      ]
     },
     {
       "id": "museum-volunteering",
@@ -471,7 +699,13 @@
         0.58073,
         0.56445
       ],
-      "kind": "volunteering"
+      "kind": "volunteering",
+      "hitbox": [
+        0.532552,
+        0.509766,
+        0.635417,
+        0.618164
+      ]
     },
     {
       "id": "island-vibe",
@@ -482,7 +716,13 @@
         0.70833,
         0.55664
       ],
-      "kind": "volunteering"
+      "kind": "volunteering",
+      "hitbox": [
+        0.648438,
+        0.490234,
+        0.761719,
+        0.62207
+      ]
     },
     {
       "id": "quandamooka-festival",
@@ -493,7 +733,13 @@
         0.80469,
         0.57617
       ],
-      "kind": "volunteering"
+      "kind": "volunteering",
+      "hitbox": [
+        0.763672,
+        0.520508,
+        0.85026,
+        0.62793
+      ]
     },
     {
       "id": "community-web-design",
@@ -504,7 +750,13 @@
         0.72786,
         0.70605
       ],
-      "kind": "volunteering"
+      "kind": "volunteering",
+      "hitbox": [
+        0.685547,
+        0.657227,
+        0.764323,
+        0.739258
+      ]
     },
     {
       "id": "myriad",
@@ -515,7 +767,13 @@
         0.91146,
         0.55273
       ],
-      "kind": "volunteering"
+      "kind": "volunteering",
+      "hitbox": [
+        0.856771,
+        0.498047,
+        0.972656,
+        0.621094
+      ]
     },
     {
       "id": "sdnx",
@@ -526,7 +784,13 @@
         0.82031,
         0.68164
       ],
-      "kind": "volunteering"
+      "kind": "volunteering",
+      "hitbox": [
+        0.770833,
+        0.624023,
+        0.875651,
+        0.740234
+      ]
     },
     {
       "id": "meals-on-wheels",
@@ -537,7 +801,13 @@
         0.92773,
         0.68457
       ],
-      "kind": "volunteering"
+      "kind": "volunteering",
+      "hitbox": [
+        0.891276,
+        0.657227,
+        0.973307,
+        0.726563
+      ]
     },
     {
       "id": "point-lookout-fishing-club",
@@ -548,7 +818,13 @@
         0.515,
         0.766
       ],
-      "kind": "volunteering"
+      "kind": "volunteering",
+      "hitbox": [
+        0.472656,
+        0.727539,
+        0.559896,
+        0.824219
+      ]
     }
   ],
   "records": [
@@ -1719,7 +1995,7 @@
   ],
   "world": {
     "name": "Luke's world",
-    "image": "./assets/connected-world.png",
+    "image": "./assets/connected-world-detail.png",
     "aspect": 1.5
   }
 }

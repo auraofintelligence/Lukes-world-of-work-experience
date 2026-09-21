@@ -13,7 +13,7 @@ npm ci
 npm run dev
 ```
 
-Open the local address shown. The world starts clear, with text behind Menu and a slim rolling jobs ticker. Select a building, vehicle, ticker job or menu place to open its record. Drag to pan and use buttons or pinch to zoom. When the world is focused, the wheel zooms, arrow keys pan, +/- zoom and Home shows the whole map. Every selection moves through the same world; no image or scene is swapped. Escape closes a record or menu. Discovery progress lasts for this visit only.
+Open the local address shown. The artwork starts at full browser width, with small numbered markers, text behind Menu and a slim rolling jobs ticker. Select any mapped building or vehicle, ticker job or menu place to open its record. Whole building regions respond, with a highlight and name on hover or keyboard focus. Drag to pan and use buttons or pinch to zoom. When the world is focused, the wheel zooms, arrow keys pan, +/- zoom and Home resets the view. Pan vertically to see the waterfront when the full-width artwork extends below the screen. Every selection moves through the same world; no image or scene is swapped. Escape closes a record or menu. Discovery progress lasts for this visit only.
 
 ## Build and check
 
@@ -25,7 +25,7 @@ npm run preview
 
 The build creates `dist/`, generates a complete readable no-JavaScript history in index.html and an object-to-fact content map. A GitHub Actions Pages workflow builds and publishes on pushes to main. Set repository Settings > Pages > Source to GitHub Actions. No backend, account, runtime API or CDN is needed.
 
-The fallback works without WebGL or JavaScript. The menu contains all places and can show numbered markers or hide the jobs ticker. The ticker pauses on hover or keyboard focus and has an explicit pause control. Reduced-motion preferences pause movement. All factual data is escaped before rendering.
+The fallback works without WebGL or JavaScript. The menu contains all places and a Project Atlas link. It can hide numbered markers or the jobs ticker. Hiding numbers leaves the buildings clickable. The ticker pauses on hover or keyboard focus and has an explicit pause control. Reduced-motion preferences pause movement. All factual data is escaped before rendering.
 
 ## Content
 
@@ -37,7 +37,7 @@ Luke approved including volunteering on 21 September 2026. Intermittent communit
 
 The generated artwork is the actual visual surface of the experience, with individually mapped buildings and vehicles. Three.js projects the single illustration onto a shallow relief mesh. Camera pan and zoom preserve the detailed illustration. This is an illustrated 2.5D world, not a reconstructed town with unseen sides or unrestricted walking. The application remains client-side and static.
 
-The active artwork is public/assets/connected-world.png. Tower 42 uses an official architectural photograph as reference for its straight sides, vertical ribs and angular crown. The final built-in generation prompt and reference links are in docs/connected-artwork.md. Earlier artwork is retained as design history but is not loaded as alternate worlds. The SVG favicon is code-drawn. Online learning platforms, personal study and workplace tickets with unnamed issuers are distinguished from named educators.
+The active artwork is public/assets/connected-world-detail.png. Tower 42 uses an official architectural photograph as reference for its straight sides, vertical ribs and angular crown. The final built-in generation prompt and reference links are in docs/connected-artwork.md. Earlier artwork is retained as design history but is not loaded as alternate worlds. The SVG favicon is code-drawn. Online learning platforms, personal study and workplace tickets with unnamed issuers are distinguished from named educators.
 
 ## Maintenance
 

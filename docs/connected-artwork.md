@@ -79,3 +79,11 @@ FRONT harbour road, left to right:
 
 Keep all 45 primary objects separate. Especially both grocery shops, both music stages, both marquee types, and each vehicle must have its own footprint. No primary object hidden behind trees or another building. Buildings should be small but architecturally rich, distinguishable roofs and facades; vehicles clear. Additional details are only paths, lamps, tiny people, gardens, rock, sea and wharf. Do not add unlisted main buildings that confuse the count. Full town with generous outer margins so nothing clips. Sharp throughout, no strong tilt-shift blur. This is fantasy geography grounded in actual roles, not a photograph of their real locations.
 NO lettering, no signage text, no logos, no legends, no labels, no UI. No egg-shaped skyscraper, no Gherkin.
+
+## Detail refinement
+
+Current asset: public/assets/connected-world-detail.png, created with the built-in image-generation tool on 21 September 2026. The generator returned 1536 x 1024 pixels despite the larger requested size. This is a detail/sharpness enhancement, not a claim of higher pixel resolution. The layout and all 46 clickable regions were visually checked. The original connected-world.png remains as the previous version.
+
+Final prompt:
+
+Use case: precise-object-edit. This is the edit target, an existing interactive map illustration. Upscale and carefully enhance its fine detail for clear browser zoom. Output 3456 x 2304 pixels (same exact 3:2 aspect ratio) or the highest available actual pixel resolution. Preserve the EXACT composition and positions, proportions, count and silhouettes of ALL buildings, vehicles, trees, roads, coastline and boats: clickable hotspots already align to the original geometry. Keep the camera, crop, warm sunset lighting, colours and detailed miniature diorama rendering unchanged. Sharpen the existing roofs, windows, metalwork, brickwork, foliage and ripples naturally. The tall rear-left Tower 42 MUST remain a straight-sided ribbed rectangular stepped tower with flat angular crown exactly as it is, NEVER an egg or rounded Gherkin. Do not redesign or relocate anything. Do not add labels, text, new buildings, people or objects. This is a faithful resolution and clarity enhancement only, not a new scene.

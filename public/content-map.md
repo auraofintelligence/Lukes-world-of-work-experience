@@ -4,7 +4,7 @@ All places share one continuous fictional harbour town. Every factual entry is s
 
 ## Mobil Burpengary
 
-Object: Service station with drinks fridges. Position on the shared world artwork (x/y, 0 to 1): 0.08464, 0.4043.
+Object: Service station with drinks fridges. Position on the shared world artwork (x/y, 0 to 1): 0.08464, 0.4043. Clickable bounds (left/top/right/bottom): 0.022786, 0.348633, 0.141927, 0.441406.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -12,7 +12,7 @@ Object: Service station with drinks fridges. Position on the shared world artwor
 
 ## Woolworths Burpengary
 
-Object: Grocery shop with striped awning. Position on the shared world artwork (x/y, 0 to 1): 0.1862, 0.41016.
+Object: Grocery shop with striped awning. Position on the shared world artwork (x/y, 0 to 1): 0.1862, 0.41016. Clickable bounds (left/top/right/bottom): 0.142578, 0.365234, 0.22526, 0.454102.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -20,7 +20,7 @@ Object: Grocery shop with striped awning. Position on the shared world artwork (
 
 ## Woolworths Buderim
 
-Object: Blue-roof provisions shop. Position on the shared world artwork (x/y, 0 to 1): 0.26823, 0.41504.
+Object: Blue-roof provisions shop. Position on the shared world artwork (x/y, 0 to 1): 0.26823, 0.41504. Clickable bounds (left/top/right/bottom): 0.229167, 0.371094, 0.311198, 0.456055.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -28,7 +28,7 @@ Object: Blue-roof provisions shop. Position on the shared world artwork (x/y, 0 
 
 ## Drive Safe Service
 
-Object: Red-roof mechanic workshop. Position on the shared world artwork (x/y, 0 to 1): 0.39323, 0.4082.
+Object: Red-roof mechanic workshop. Position on the shared world artwork (x/y, 0 to 1): 0.39323, 0.4082. Clickable bounds (left/top/right/bottom): 0.324219, 0.360352, 0.455729, 0.460938.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -36,7 +36,7 @@ Object: Red-roof mechanic workshop. Position on the shared world artwork (x/y, 0
 
 ## UK bar work
 
-Object: Brick pub with green trim. Position on the shared world artwork (x/y, 0 to 1): 0.09961, 0.29492.
+Object: Brick pub with green trim. Position on the shared world artwork (x/y, 0 to 1): 0.09961, 0.29492. Clickable bounds (left/top/right/bottom): 0.052083, 0.242188, 0.153646, 0.338867.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -44,7 +44,7 @@ Object: Brick pub with green trim. Position on the shared world artwork (x/y, 0 
 
 ## Tower 42 demolition
 
-Object: Straight-sided Tower 42 with vertical metal ribs and an angular crown. Position on the shared world artwork (x/y, 0 to 1): 0.15299, 0.11719.
+Object: Straight-sided Tower 42 with vertical metal ribs and an angular crown. Position on the shared world artwork (x/y, 0 to 1): 0.15299, 0.11719. Clickable bounds (left/top/right/bottom): 0.119141, 0.011719, 0.177734, 0.224609.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -52,7 +52,7 @@ Object: Straight-sided Tower 42 with vertical metal ribs and an angular crown. P
 
 ## Gift-card factory
 
-Object: Gift-card factory with packing tables. Position on the shared world artwork (x/y, 0 to 1): 0.21094, 0.29688.
+Object: Gift-card factory with packing tables. Position on the shared world artwork (x/y, 0 to 1): 0.21094, 0.29688. Clickable bounds (left/top/right/bottom): 0.164063, 0.249023, 0.253255, 0.34082.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -60,7 +60,7 @@ Object: Gift-card factory with packing tables. Position on the shared world artw
 
 ## W.A.A.P.
 
-Object: Timber festival stage. Position on the shared world artwork (x/y, 0 to 1): 0.51888, 0.40918.
+Object: Timber festival stage. Position on the shared world artwork (x/y, 0 to 1): 0.51888, 0.40918. Clickable bounds (left/top/right/bottom): 0.46875, 0.362305, 0.570964, 0.460938.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -68,7 +68,7 @@ Object: Timber festival stage. Position on the shared world artwork (x/y, 0 to 1
 
 ## Storage marquees
 
-Object: White storage marquee with pallets. Position on the shared world artwork (x/y, 0 to 1): 0.29362, 0.29199.
+Object: White storage marquee with pallets. Position on the shared world artwork (x/y, 0 to 1): 0.29362, 0.29199. Clickable bounds (left/top/right/bottom): 0.254557, 0.245117, 0.334635, 0.341797.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -76,7 +76,7 @@ Object: White storage marquee with pallets. Position on the shared world artwork
 
 ## Temporary horse stables
 
-Object: Modular horse stable installation. Position on the shared world artwork (x/y, 0 to 1): 0.39779, 0.29883.
+Object: Modular horse stable installation. Position on the shared world artwork (x/y, 0 to 1): 0.39779, 0.29883. Clickable bounds (left/top/right/bottom): 0.33724, 0.245117, 0.45638, 0.344727.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -84,7 +84,7 @@ Object: Modular horse stable installation. Position on the shared world artwork 
 
 ## Sheet-metal roofing
 
-Object: Building with a sheet-metal roof being installed. Position on the shared world artwork (x/y, 0 to 1): 0.5013, 0.30176.
+Object: Building with a sheet-metal roof being installed. Position on the shared world artwork (x/y, 0 to 1): 0.5013, 0.30176. Clickable bounds (left/top/right/bottom): 0.458333, 0.245117, 0.535156, 0.348633.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -92,7 +92,7 @@ Object: Building with a sheet-metal roof being installed. Position on the shared
 
 ## Moreton Events
 
-Object: Separate white festival production marquee. Position on the shared world artwork (x/y, 0 to 1): 0.61133, 0.43164.
+Object: Separate white festival production marquee. Position on the shared world artwork (x/y, 0 to 1): 0.61133, 0.43164. Clickable bounds (left/top/right/bottom): 0.578776, 0.391602, 0.647135, 0.473633.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -100,7 +100,7 @@ Object: Separate white festival production marquee. Position on the shared world
 
 ## Shopfitting
 
-Object: Open-front shopfitting workshop. Position on the shared world artwork (x/y, 0 to 1): 0.58073, 0.3125.
+Object: Open-front shopfitting workshop. Position on the shared world artwork (x/y, 0 to 1): 0.58073, 0.3125. Clickable bounds (left/top/right/bottom): 0.53776, 0.270508, 0.634115, 0.350586.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -108,7 +108,7 @@ Object: Open-front shopfitting workshop. Position on the shared world artwork (x
 
 ## Queensland Rail
 
-Object: Yellow railway maintenance train. Position on the shared world artwork (x/y, 0 to 1): 0.11914, 0.61914.
+Object: Yellow railway maintenance train. Position on the shared world artwork (x/y, 0 to 1): 0.11914, 0.61914. Clickable bounds (left/top/right/bottom): 0.048828, 0.573242, 0.205729, 0.662109.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -116,7 +116,7 @@ Object: Yellow railway maintenance train. Position on the shared world artwork (
 
 ## Skystar
 
-Object: Passenger aircraft on the airport apron. Position on the shared world artwork (x/y, 0 to 1): 0.70833, 0.17285.
+Object: Passenger aircraft on the airport apron. Position on the shared world artwork (x/y, 0 to 1): 0.70833, 0.17285. Clickable bounds (left/top/right/bottom): 0.647135, 0.092773, 0.789063, 0.219727.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -124,7 +124,7 @@ Object: Passenger aircraft on the airport apron. Position on the shared world ar
 
 ## Semi-trailer workshop
 
-Object: Semi-trailer repair workshop. Position on the shared world artwork (x/y, 0 to 1): 0.6901, 0.3125.
+Object: Semi-trailer repair workshop. Position on the shared world artwork (x/y, 0 to 1): 0.6901, 0.3125. Clickable bounds (left/top/right/bottom): 0.641276, 0.254883, 0.753906, 0.352539.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -132,7 +132,7 @@ Object: Semi-trailer repair workshop. Position on the shared world artwork (x/y,
 
 ## ACE Treelopping Services
 
-Object: Tree-service truck with chipper. Position on the shared world artwork (x/y, 0 to 1): 0.27995, 0.64844.
+Object: Tree-service truck with chipper. Position on the shared world artwork (x/y, 0 to 1): 0.27995, 0.64844. Clickable bounds (left/top/right/bottom): 0.236979, 0.615234, 0.328776, 0.677734.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -140,7 +140,7 @@ Object: Tree-service truck with chipper. Position on the shared world artwork (x
 
 ## Hume Concrete
 
-Object: Precast concrete culvert yard. Position on the shared world artwork (x/y, 0 to 1): 0.78906, 0.32227.
+Object: Precast concrete culvert yard. Position on the shared world artwork (x/y, 0 to 1): 0.78906, 0.32227. Clickable bounds (left/top/right/bottom): 0.758464, 0.273438, 0.849609, 0.352539.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -148,7 +148,7 @@ Object: Precast concrete culvert yard. Position on the shared world artwork (x/y
 
 ## Ausblast
 
-Object: Yellow industrial service truck. Position on the shared world artwork (x/y, 0 to 1): 0.38281, 0.66406.
+Object: Yellow industrial service truck. Position on the shared world artwork (x/y, 0 to 1): 0.38281, 0.66406. Clickable bounds (left/top/right/bottom): 0.340495, 0.62793, 0.429688, 0.691406.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -156,7 +156,7 @@ Object: Yellow industrial service truck. Position on the shared world artwork (x
 
 ## Australia Post
 
-Object: Red mail delivery van. Position on the shared world artwork (x/y, 0 to 1): 0.46354, 0.67578.
+Object: Red mail delivery van. Position on the shared world artwork (x/y, 0 to 1): 0.46354, 0.67578. Clickable bounds (left/top/right/bottom): 0.436849, 0.649414, 0.489583, 0.704102.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -164,7 +164,7 @@ Object: Red mail delivery van. Position on the shared world artwork (x/y, 0 to 1
 
 ## Kirby
 
-Object: Cream demonstration van beside a vacuum cleaner. Position on the shared world artwork (x/y, 0 to 1): 0.52799, 0.68555.
+Object: Cream demonstration van beside a vacuum cleaner. Position on the shared world artwork (x/y, 0 to 1): 0.52799, 0.68555. Clickable bounds (left/top/right/bottom): 0.500651, 0.65625, 0.565755, 0.716797.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -172,7 +172,7 @@ Object: Cream demonstration van beside a vacuum cleaner. Position on the shared 
 
 ## Viande Fine Foods
 
-Object: White refrigerated delivery truck. Position on the shared world artwork (x/y, 0 to 1): 0.62826, 0.68359.
+Object: White refrigerated delivery truck. Position on the shared world artwork (x/y, 0 to 1): 0.62826, 0.68359. Clickable bounds (left/top/right/bottom): 0.582682, 0.638672, 0.66862, 0.723633.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -180,7 +180,7 @@ Object: White refrigerated delivery truck. Position on the shared world artwork 
 
 ## Owner builder
 
-Object: Unfinished timber house on the hill. Position on the shared world artwork (x/y, 0 to 1): 0.82357, 0.1875.
+Object: Unfinished timber house on the hill. Position on the shared world artwork (x/y, 0 to 1): 0.82357, 0.1875. Clickable bounds (left/top/right/bottom): 0.791016, 0.124023, 0.865234, 0.223633.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -188,7 +188,7 @@ Object: Unfinished timber house on the hill. Position on the shared world artwor
 
 ## Maringa Farm
 
-Object: Green-roof farm office. Position on the shared world artwork (x/y, 0 to 1): 0.79883, 0.43457.
+Object: Green-roof farm office. Position on the shared world artwork (x/y, 0 to 1): 0.79883, 0.43457. Clickable bounds (left/top/right/bottom): 0.76237, 0.397461, 0.847005, 0.479492.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -196,7 +196,7 @@ Object: Green-roof farm office. Position on the shared world artwork (x/y, 0 to 
 
 ## Americold / Labourforce
 
-Object: Sage-green distribution warehouse. Position on the shared world artwork (x/y, 0 to 1): 0.90495, 0.30273.
+Object: Sage-green distribution warehouse. Position on the shared world artwork (x/y, 0 to 1): 0.90495, 0.30273. Clickable bounds (left/top/right/bottom): 0.852214, 0.239258, 0.967448, 0.350586.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -204,7 +204,7 @@ Object: Sage-green distribution warehouse. Position on the shared world artwork 
 
 ## Q & A Market Research
 
-Object: Glass-fronted telephone research office. Position on the shared world artwork (x/y, 0 to 1): 0.70833, 0.42188.
+Object: Glass-fronted telephone research office. Position on the shared world artwork (x/y, 0 to 1): 0.70833, 0.42188. Clickable bounds (left/top/right/bottom): 0.65625, 0.375, 0.759115, 0.469727.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -212,7 +212,7 @@ Object: Glass-fronted telephone research office. Position on the shared world ar
 
 ## Yorke Consulting
 
-Object: Orange forklift beside the concrete building site. Position on the shared world artwork (x/y, 0 to 1): 0.90951, 0.17578.
+Object: Orange forklift beside the concrete building site. Position on the shared world artwork (x/y, 0 to 1): 0.90951, 0.17578. Clickable bounds (left/top/right/bottom): 0.86849, 0.103516, 0.96224, 0.231445.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -220,7 +220,7 @@ Object: Orange forklift beside the concrete building site. Position on the share
 
 ## Generative AI research
 
-Object: Warm timber AI research studio. Position on the shared world artwork (x/y, 0 to 1): 0.90495, 0.41406.
+Object: Warm timber AI research studio. Position on the shared world artwork (x/y, 0 to 1): 0.90495, 0.41406. Clickable bounds (left/top/right/bottom): 0.86263, 0.374023, 0.959635, 0.472656.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -228,7 +228,7 @@ Object: Warm timber AI research studio. Position on the shared world artwork (x/
 
 ## Grace Lutheran College
 
-Object: Red-brick high school with a small bell tower. Position on the shared world artwork (x/y, 0 to 1): 0.25391, 0.16602.
+Object: Red-brick high school with a small bell tower. Position on the shared world artwork (x/y, 0 to 1): 0.25391, 0.16602. Clickable bounds (left/top/right/bottom): 0.200521, 0.108398, 0.302083, 0.208984.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -236,7 +236,7 @@ Object: Red-brick high school with a small bell tower. Position on the shared wo
 
 ## Googa
 
-Object: Outdoor-education lodge. Position on the shared world artwork (x/y, 0 to 1): 0.61263, 0.19238.
+Object: Outdoor-education lodge. Position on the shared world artwork (x/y, 0 to 1): 0.61263, 0.19238. Clickable bounds (left/top/right/bottom): 0.570313, 0.150391, 0.650391, 0.231445.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -244,7 +244,7 @@ Object: Outdoor-education lodge. Position on the shared world artwork (x/y, 0 to
 
 ## University of the Sunshine Coast
 
-Object: Sandstone university hall. Position on the shared world artwork (x/y, 0 to 1): 0.35807, 0.16309.
+Object: Sandstone university hall. Position on the shared world artwork (x/y, 0 to 1): 0.35807, 0.16309. Clickable bounds (left/top/right/bottom): 0.309245, 0.099609, 0.396484, 0.208008.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -252,7 +252,7 @@ Object: Sandstone university hall. Position on the shared world artwork (x/y, 0 
 
 ## TAFE
 
-Object: Technical college with workshop and computer classroom. Position on the shared world artwork (x/y, 0 to 1): 0.45052, 0.16504.
+Object: Technical college with workshop and computer classroom. Position on the shared world artwork (x/y, 0 to 1): 0.45052, 0.16504. Clickable bounds (left/top/right/bottom): 0.404948, 0.119141, 0.492188, 0.214844.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -261,7 +261,7 @@ Object: Technical college with workshop and computer classroom. Position on the 
 
 ## Workplace training records
 
-Object: Cream training records building. Position on the shared world artwork (x/y, 0 to 1): 0.48568, 0.58203.
+Object: Cream training records building. Position on the shared world artwork (x/y, 0 to 1): 0.48568, 0.58203. Clickable bounds (left/top/right/bottom): 0.455729, 0.537109, 0.53125, 0.617188.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -271,7 +271,7 @@ Object: Cream training records building. Position on the shared world artwork (x
 
 ## Sarina Russo
 
-Object: Business college with a timber verandah. Position on the shared world artwork (x/y, 0 to 1): 0.52083, 0.18359.
+Object: Business college with a timber verandah. Position on the shared world artwork (x/y, 0 to 1): 0.52083, 0.18359. Clickable bounds (left/top/right/bottom): 0.480469, 0.141602, 0.565104, 0.226563.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -279,7 +279,7 @@ Object: Business college with a timber verandah. Position on the shared world ar
 
 ## Christopher Howard Training
 
-Object: Green-roof seminar and training house. Position on the shared world artwork (x/y, 0 to 1): 0.0931, 0.52539.
+Object: Green-roof seminar and training house. Position on the shared world artwork (x/y, 0 to 1): 0.0931, 0.52539. Clickable bounds (left/top/right/bottom): 0.042318, 0.46875, 0.145833, 0.571289.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -287,7 +287,7 @@ Object: Green-roof seminar and training house. Position on the shared world artw
 
 ## iTunes University
 
-Object: Media learning library. Position on the shared world artwork (x/y, 0 to 1): 0.30013, 0.54199.
+Object: Media learning library. Position on the shared world artwork (x/y, 0 to 1): 0.30013, 0.54199. Clickable bounds (left/top/right/bottom): 0.25, 0.487305, 0.358073, 0.600586.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -295,7 +295,7 @@ Object: Media learning library. Position on the shared world artwork (x/y, 0 to 
 
 ## Independent study
 
-Object: Independent-study cottage. Position on the shared world artwork (x/y, 0 to 1): 0.4082, 0.5625.
+Object: Independent-study cottage. Position on the shared world artwork (x/y, 0 to 1): 0.4082, 0.5625. Clickable bounds (left/top/right/bottom): 0.364583, 0.517578, 0.453125, 0.605469.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -304,7 +304,7 @@ Object: Independent-study cottage. Position on the shared world artwork (x/y, 0 
 
 ## Evocca
 
-Object: Game-design school with computer studio. Position on the shared world artwork (x/y, 0 to 1): 0.19792, 0.53223.
+Object: Game-design school with computer studio. Position on the shared world artwork (x/y, 0 to 1): 0.19792, 0.53223. Clickable bounds (left/top/right/bottom): 0.150391, 0.487305, 0.248047, 0.585938.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -312,7 +312,7 @@ Object: Game-design school with computer studio. Position on the shared world ar
 
 ## Historical Museum
 
-Object: Local history museum with archive desk. Position on the shared world artwork (x/y, 0 to 1): 0.58073, 0.56445.
+Object: Local history museum with archive desk. Position on the shared world artwork (x/y, 0 to 1): 0.58073, 0.56445. Clickable bounds (left/top/right/bottom): 0.532552, 0.509766, 0.635417, 0.618164.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -320,7 +320,7 @@ Object: Local history museum with archive desk. Position on the shared world art
 
 ## Island Vibe
 
-Object: Timber music-festival stage. Position on the shared world artwork (x/y, 0 to 1): 0.70833, 0.55664.
+Object: Timber music-festival stage. Position on the shared world artwork (x/y, 0 to 1): 0.70833, 0.55664. Clickable bounds (left/top/right/bottom): 0.648438, 0.490234, 0.761719, 0.62207.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -328,7 +328,7 @@ Object: Timber music-festival stage. Position on the shared world artwork (x/y, 
 
 ## Quandamooka Festival
 
-Object: Open-sided coastal event pavilion. Position on the shared world artwork (x/y, 0 to 1): 0.80469, 0.57617.
+Object: Open-sided coastal event pavilion. Position on the shared world artwork (x/y, 0 to 1): 0.80469, 0.57617. Clickable bounds (left/top/right/bottom): 0.763672, 0.520508, 0.85026, 0.62793.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -336,7 +336,7 @@ Object: Open-sided coastal event pavilion. Position on the shared world artwork 
 
 ## Community web design
 
-Object: Web-design cottage with computer desks. Position on the shared world artwork (x/y, 0 to 1): 0.72786, 0.70605.
+Object: Web-design cottage with computer desks. Position on the shared world artwork (x/y, 0 to 1): 0.72786, 0.70605. Clickable bounds (left/top/right/bottom): 0.685547, 0.657227, 0.764323, 0.739258.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -344,7 +344,7 @@ Object: Web-design cottage with computer desks. Position on the shared world art
 
 ## Myriad Conference
 
-Object: Glass-fronted technology conference hall. Position on the shared world artwork (x/y, 0 to 1): 0.91146, 0.55273.
+Object: Glass-fronted technology conference hall. Position on the shared world artwork (x/y, 0 to 1): 0.91146, 0.55273. Clickable bounds (left/top/right/bottom): 0.856771, 0.498047, 0.972656, 0.621094.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -352,7 +352,7 @@ Object: Glass-fronted technology conference hall. Position on the shared world a
 
 ## Space Development Nexus
 
-Object: AI strategy and space-learning studio. Position on the shared world artwork (x/y, 0 to 1): 0.82031, 0.68164.
+Object: AI strategy and space-learning studio. Position on the shared world artwork (x/y, 0 to 1): 0.82031, 0.68164. Clickable bounds (left/top/right/bottom): 0.770833, 0.624023, 0.875651, 0.740234.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -360,7 +360,7 @@ Object: AI strategy and space-learning studio. Position on the shared world artw
 
 ## Meals on Wheels
 
-Object: Meal-delivery van with insulated trays. Position on the shared world artwork (x/y, 0 to 1): 0.92773, 0.68457.
+Object: Meal-delivery van with insulated trays. Position on the shared world artwork (x/y, 0 to 1): 0.92773, 0.68457. Clickable bounds (left/top/right/bottom): 0.891276, 0.657227, 0.973307, 0.726563.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -368,7 +368,7 @@ Object: Meal-delivery van with insulated trays. Position on the shared world art
 
 ## Point Lookout Fishing Club
 
-Object: Timber fishing-club boathouse on the wharf. Position on the shared world artwork (x/y, 0 to 1): 0.515, 0.766.
+Object: Timber fishing-club boathouse on the wharf. Position on the shared world artwork (x/y, 0 to 1): 0.515, 0.766. Clickable bounds (left/top/right/bottom): 0.472656, 0.727539, 0.559896, 0.824219.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|

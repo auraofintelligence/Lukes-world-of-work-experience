@@ -6,19 +6,22 @@ body{background:#102c35;color:#f5ecd9}
 #scene:active{cursor:grabbing}
 #scene:focus-visible{outline:2px solid #f0d19d;outline-offset:-5px}
 #labels{inset:0;z-index:2}
-.hide-markers #labels{display:none}
+.hide-markers .pin-number{opacity:0}
 .menu-open{position:absolute;top:20px;left:22px;z-index:5;display:flex;align-items:center;gap:9px;padding:11px 17px;border:1px solid #f1e5c869;border-radius:24px;background:#112e3dde;backdrop-filter:blur(12px);box-shadow:0 4px 22px #071a2433;color:#fff1d4;font-size:13px}
 .menu-open span{font-size:16px}
 .map-controls{z-index:4;right:22px;top:auto;bottom:22px;gap:8px}
 .map-controls button{background:#112e3dde;border-color:#f5e9cf69;color:#fff0d1;backdrop-filter:blur(12px);width:40px;height:40px;box-shadow:0 2px 18px #06192720}
 .map-controls button:hover,.menu-open:hover{background:#234b59}
 #status{z-index:5;bottom:22px;left:22px;background:#122f40ef;color:#f5e6cb;border:1px solid #fff3d62e;max-width:min(360px,calc(100% - 95px));font-size:12px;line-height:1.5}
-:root .pin{transform:translate(-50%,-50%);width:30px;height:30px;min-width:30px;min-height:30px;justify-content:center;padding:0;display:flex;border-radius:50%;border:1px solid #fce8b7c2;background:#112e3dd9;color:#fff4d4;box-shadow:0 2px 9px #081a3545;backdrop-filter:blur(4px);font-size:10px;letter-spacing:.025em}
+:root .pin{transform:none;min-width:0;min-height:0;padding:0;display:block;border-radius:8px;border:2px solid transparent;background:transparent;color:#fff4d4;box-shadow:none;backdrop-filter:none;cursor:pointer;touch-action:none;font-size:10px;letter-spacing:.025em}
 .pin::before{display:none}
-.pin:hover,.pin:focus-visible,.pin.selected{background:#f2d5a2;color:#163542;z-index:9}
-.pin-name{position:absolute;top:-37px;left:50%;transform:translateX(-50%);pointer-events:none;background:#102f40f0;border:1px solid #ecd7a54d;white-space:nowrap;color:#fff1d4;padding:8px 11px;border-radius:5px;font-size:11px;opacity:0;transition:opacity .15s}
+:root .pin:hover,:root .pin:focus-visible{background:#ffe5a51c;border-color:#fff0bbcc;box-shadow:0 0 20px #ffe5a540;z-index:9;outline:none}
+:root .pin.selected{border-color:#ffe5a5b3;background:#ffe5a514}
+.pin-number{position:absolute;left:var(--pin-x);top:var(--pin-y);transform:translate(-50%,-50%);display:grid;place-items:center;width:23px;height:23px;border:1px solid #fce8b7db;border-radius:50%;background:#112e3dcc;color:#fff4d4;box-shadow:0 2px 9px #081a3545;pointer-events:none;transition:opacity .15s}
+.pin-name{position:absolute;top:var(--pin-y);left:var(--pin-x);transform:translate(-50%,calc(-100% - 18px));pointer-events:none;background:#102f40f5;border:1px solid #ecd7a54d;white-space:normal;width:max-content;max-width:210px;color:#fff1d4;padding:8px 11px;border-radius:5px;font-size:11px;line-height:1.35;opacity:0;transition:opacity .15s}
 .pin:hover .pin-name,.pin:focus-visible .pin-name{opacity:1}
-.pin.visited{border-color:#d4dfb0}
+.pin:hover .pin-number,.pin:focus-visible .pin-number{opacity:1;background:#f2d5a2;color:#163542}
+.pin.visited .pin-number{border-color:#d4dfb0}
 #world-menu{width:min(890px,calc(100% - 32px));max-width:890px;max-height:calc(100svh - 40px);padding:35px;border:1px solid #dfd2b9;border-radius:16px;background:#f6efe1;color:#203f40;overscroll-behavior:contain}
 #world-menu h1{font-size:43px;margin:0 45px 8px 0}
 #world-menu .menu-subtitle{font-size:14px;margin:0 0 18px}
@@ -49,7 +52,7 @@ body{background:#102c35;color:#f5ecd9}
 #detail h2{font-size:36px}
 #scrim{background:linear-gradient(90deg,transparent 35%,#05243938 70%)}
 dialog{color:#203f40}
-.fallback #world{height:100svh;min-height:560px;background:#102c35 var(--world-art,url('/assets/connected-world.png')) center/contain no-repeat}
+.fallback #world{height:100svh;min-height:560px;background:#102c35 var(--world-art,url('/assets/connected-world-detail.png')) top center/100% auto no-repeat}
 .fallback #labels{display:none}
 .no-script{margin:0;background:#f5f0e5;color:#203f40}
 @media(max-width:600px){
@@ -59,7 +62,8 @@ dialog{color:#203f40}
   #world-menu h1{font-size:36px}.menu-actions{gap:5px 18px}#world-menu .instructions{max-width:260px}
   #place-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}.place-card{min-width:0;min-height:92px}.place-card strong{font-size:11px}
   .route-title{font-size:11px;gap:12px;align-items:start}.route-title button{font-size:11px}
-  :root .pin{width:29px;height:29px;min-height:29px;min-width:29px;font-size:9px;font-weight:400}.pin-name{font-size:10px;top:-35px}
+  :root .pin{min-height:0;min-width:0;font-size:9px;font-weight:400}.pin-name{font-size:10px;max-width:170px}.pin-number{width:23px;height:23px}
+  .fallback #world{background-position:center;background-size:cover}
   #status{bottom:16px;left:14px;font-size:11px}.history{padding:60px 6%}.history h2{font-size:42px}
   #detail{right:8px;left:8px;top:auto;bottom:8px;width:calc(100% - 16px);max-height:63svh;padding:46px 20px 22px;border-radius:14px}#detail h2{font-size:30px}#scrim{background:linear-gradient(0deg,#08233566,transparent 80%)}
 }

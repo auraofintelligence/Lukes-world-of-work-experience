@@ -8,6 +8,8 @@ Luke's design corrections: preserve the rich generated-artwork appearance. Every
 
 Everything must inhabit ONE coherent connected world. Luke rejected separate work, UK, trades, education and volunteer scenes. Do not reintroduce scene tabs or swap the world image when selecting a role. Tower 42 must use its straight-sided, vertically ribbed, angular-crowned form, never the rounded Gherkin. Check an official visual reference. Keep title, instructions and the complete place list behind a menu so the artwork is clear by default. The jobs list is a rolling ticker, not a fixed scrolling strip; provide pause and hide controls and reduced-motion support. Details open only on selection.
 
+The artwork fills the browser width. Every mapped building or vehicle must have a broad, image-aligned clickable region, defined by `hitbox` in the content file, with hover/focus feedback. Numbered markers start visible but can be hidden without disabling the building interactions. Dragging from a building must still pan the world. Keep the Project Atlas link in the menu.
+
 Run `npm run build`, `npm run check` and `git diff --check` before publication. Check desktop, mobile, keyboard interactions and fallback after relevant changes. Preserve unrelated edits. Do not change the licence, workflow or publishing destination through routine automation.
 
 Luke explicitly does not want scheduled automations for this project. Make updates as he supplies and approves details in conversation, then publish the reviewed changes. See `docs/maintenance.md`. No force-push or visibility change.

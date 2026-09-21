@@ -37,8 +37,10 @@ export async function createWorld(container, data, onSelect, onLost) {
   world.add(relief);
   scene.add(world);
 
+  const labelLayer = document.querySelector('#labels');
   const labels = places.map((place, index) => {
     const button = document.createElement('button');
+    button.type = 'button';
     button.className = 'pin';
     button.dataset.place = place.id;
     button.dataset.kind = place.kind;
@@ -48,9 +50,13 @@ export async function createWorld(container, data, onSelect, onLost) {
     name.className = 'pin-name';
     name.textContent = place.name;
     button.append(name);
-    button.onclick = () => onSelect(index);
-    document.querySelector('#labels').append(button);
-    return { button, place, point: new THREE.Vector3(), x: 0, y: 0 };
+    // Pointer selection is handled after the shared drag gesture. A native
+    // keyboard or assistive-technology click can open the place immediately.
+    button.addEventListener('click', event => { if (event.detail === 0) onSelect(index); });
+    labelLayer.append(button);
+    const [u, top] = place.anchor;
+    const hitbox = place.hitbox || [u - .018, top - .025, u + .018, top + .025];
+    return { index, button, place, hitbox, point: new THREE.Vector3(), corners: Array.from({ length: 4 }, () => new THREE.Vector3()), x: 0, y: 0, bounds: null };
   });
 
   let paused = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -74,6 +80,9 @@ export async function createWorld(container, data, onSelect, onLost) {
   }
   function home() {
     target = { x: 0, y: 0, zoom: 1 };
+    // Desktop starts at the top of the illustration, at exactly screen width.
+    // Taller artwork continues below the viewport and is reachable by panning.
+    target.y = Math.max(0, HEIGHT / 2 - camera.top);
     limits();
     labels.forEach(({ button }) => button.classList.remove('selected'));
   }
@@ -81,9 +90,7 @@ export async function createWorld(container, data, onSelect, onLost) {
     const width = container.clientWidth;
     const height = container.clientHeight;
     const aspect = width / height;
-    // Contain rather than cover: the overview includes all four image edges on
-    // every screen, including portrait phones. The extra 4% keeps pins in reach.
-    const halfH = Math.max(HEIGHT / 2, WIDTH / (2 * aspect)) * 1.04;
+    const halfH = WIDTH / (2 * aspect);
     camera.left = -halfH * aspect;
     camera.right = halfH * aspect;
     camera.top = halfH;
@@ -95,12 +102,14 @@ export async function createWorld(container, data, onSelect, onLost) {
   resize();
   home();
   // Start portrait phones close enough to fill the screen with the town.
-  // Reset and the Home key still deliberately return to the complete overview.
+  // Reset and the Home key return to the full width of the illustration.
   if (container.clientWidth < 700) {
     target.zoom = Math.min(6, Math.max(1, camera.right * 2 / WIDTH, camera.top * 2 / HEIGHT));
     limits();
   }
   camera.zoom = target.zoom;
+  camera.position.x = target.x;
+  camera.position.y = target.y;
   camera.updateProjectionMatrix();
   new ResizeObserver(resize).observe(container);
   new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; }).observe(container);
@@ -110,26 +119,28 @@ export async function createWorld(container, data, onSelect, onLost) {
     limits();
   }
   const canvas = renderer.domElement;
-  canvas.addEventListener('wheel', event => {
-    if (document.activeElement !== container) return;
+  canvas.style.touchAction = 'none';
+  labelLayer.style.touchAction = 'none';
+  function onWheel(event) {
+    if (document.activeElement !== container && !labelLayer.contains(document.activeElement)) return;
     event.preventDefault();
     zoom(Math.exp(-event.deltaY * .001));
-  }, { passive: false });
-  canvas.addEventListener('pointerdown', event => {
+  }
+  function onPointerDown(event) {
     if (event.button !== 0) return;
     document.body.classList.add('world-active');
     container.focus({ preventScroll: true });
-    canvas.setPointerCapture(event.pointerId);
+    event.currentTarget.setPointerCapture(event.pointerId);
     contacts.set(event.pointerId, { x: event.clientX, y: event.clientY });
     drag = { x: event.clientX, y: event.clientY, cameraX: target.x, cameraY: target.y };
-    moved = false;
+    moved = contacts.size > 1;
     if (contacts.size === 2) {
       const [a, b] = [...contacts.values()];
       pinchDistance = Math.hypot(a.x - b.x, a.y - b.y);
       moved = true;
     }
-  });
-  canvas.addEventListener('pointermove', event => {
+  }
+  function onPointerMove(event) {
     const rect = container.getBoundingClientRect();
     pointer.x = (event.clientX - rect.left) / rect.width * 2 - 1;
     pointer.y = (event.clientY - rect.top) / rect.height * 2 - 1;
@@ -147,25 +158,37 @@ export async function createWorld(container, data, onSelect, onLost) {
     const dx = event.clientX - drag.x;
     const dy = event.clientY - drag.y;
     moved ||= Math.hypot(dx, dy) > 5;
+    if (!moved) return;
     target.x = drag.cameraX - dx / rect.width * (camera.right - camera.left) / target.zoom;
     target.y = drag.cameraY + dy / rect.height * (camera.top - camera.bottom) / target.zoom;
     limits();
-  });
-  canvas.addEventListener('pointerup', event => {
+  }
+  function onPointerUp(event) {
+    if (!contacts.has(event.pointerId)) return;
     contacts.delete(event.pointerId);
     if (!moved && drag) {
       const rect = container.getBoundingClientRect();
       const x = event.clientX - rect.left, y = event.clientY - rect.top;
-      const nearest = labels.map((label, index) => ({ index, distance: Math.hypot(label.x - x, label.y - y) }))
-        .sort((a, b) => a.distance - b.distance)[0];
-      if (nearest?.distance < 26) onSelect(nearest.index);
+      // The whole mapped roof, facade or vehicle is clickable. If perspective
+      // creates a small overlap, favour the smaller, more specific region.
+      const hits = labels.filter(({ button, bounds }) => !button.hidden && bounds && x >= bounds.left && x <= bounds.right && y >= bounds.top && y <= bounds.bottom)
+        .sort((a, b) => a.bounds.area - b.bounds.area || Math.hypot(a.x - x, a.y - y) - Math.hypot(b.x - x, b.y - y));
+      if (hits.length) onSelect(hits[0].index);
     }
     const remaining = [...contacts.values()][0];
     drag = remaining ? { x: remaining.x, y: remaining.y, cameraX: target.x, cameraY: target.y } : undefined;
     pinchDistance = 0;
-  });
-  canvas.addEventListener('pointercancel', () => { drag = undefined; contacts.clear(); pinchDistance = 0; });
-  canvas.addEventListener('pointerleave', () => { pointer.x = 0; pointer.y = 0; });
+  }
+  // The overlay and canvas share gestures, so dragging a building pans the
+  // world just like dragging a road. A tap or click opens that building.
+  for (const surface of [canvas, labelLayer]) {
+    surface.addEventListener('wheel', onWheel, { passive: false });
+    surface.addEventListener('pointerdown', onPointerDown);
+    surface.addEventListener('pointermove', onPointerMove);
+    surface.addEventListener('pointerup', onPointerUp);
+    surface.addEventListener('pointercancel', () => { drag = undefined; contacts.clear(); pinchDistance = 0; });
+    surface.addEventListener('pointerleave', () => { if (!contacts.size) { pointer.x = 0; pointer.y = 0; } });
+  }
   canvas.addEventListener('webglcontextlost', event => {
     event.preventDefault();
     stopped = true;
@@ -173,7 +196,7 @@ export async function createWorld(container, data, onSelect, onLost) {
     document.querySelector('#labels').hidden = true;
     onLost();
   });
-  container.addEventListener('keydown', event => {
+  function onKeyDown(event) {
     const directions = { ArrowLeft: [-2, 0], ArrowRight: [2, 0], ArrowUp: [0, 2], ArrowDown: [0, -2] };
     if (directions[event.key]) {
       event.preventDefault();
@@ -183,7 +206,18 @@ export async function createWorld(container, data, onSelect, onLost) {
     } else if (event.key === '+' || event.key === '=') { event.preventDefault(); zoom(1.3); }
     else if (event.key === '-') { event.preventDefault(); zoom(1 / 1.3); }
     else if (event.key === 'Home') { event.preventDefault(); home(); }
-  });
+  }
+  container.addEventListener('keydown', onKeyDown);
+  labelLayer.addEventListener('keydown', onKeyDown);
+
+  function projectPoint(u, top, point, width, height) {
+    point.set((u - .5) * WIDTH, (.5 - top) * HEIGHT, depthAt(u, 1 - top) + .025);
+    world.localToWorld(point);
+    point.project(camera);
+    point.x = (point.x * .5 + .5) * width;
+    point.y = (-point.y * .5 + .5) * height;
+    return point;
+  }
 
   renderer.setAnimationLoop(ms => {
     const dt = Math.min((ms - lastTime) / 1000, .05);
@@ -194,32 +228,42 @@ export async function createWorld(container, data, onSelect, onLost) {
     camera.position.y = THREE.MathUtils.lerp(camera.position.y, target.y, ease);
     camera.zoom = THREE.MathUtils.lerp(camera.zoom, target.zoom, ease);
     camera.updateProjectionMatrix();
-    // Gentle depth responds to the pointer only after zooming. The full overview
-    // stays still so it consistently shows the same complete, connected map.
+    camera.updateMatrixWorld();
+    // Gentle depth responds to the pointer only after zooming. The full-width
+    // starting view stays still so the artwork keeps its exact screen edges.
     const depth = target.zoom > 1.05 && !paused;
     world.rotation.y = THREE.MathUtils.lerp(world.rotation.y, depth ? pointer.x * .004 : 0, ease);
     world.rotation.x = THREE.MathUtils.lerp(world.rotation.x, depth ? pointer.y * .003 : 0, ease);
     world.updateMatrixWorld();
     const width = container.clientWidth;
     const height = container.clientHeight;
-    const placed = [];
-    // Selected and keyboard-focused markers take priority when overview labels
-    // overlap. Every individual place stays available in the complete route.
-    const ordered = [...labels].sort((a, b) => Number(b.button.classList.contains('selected') || document.activeElement === b.button) - Number(a.button.classList.contains('selected') || document.activeElement === a.button));
-    for (const label of ordered) {
-      const { button, place, point } = label;
+    for (const label of labels) {
+      const { button, place, point, hitbox, corners } = label;
       const [u, top] = place.anchor;
-      point.set((u - .5) * WIDTH, (.5 - top) * HEIGHT, depthAt(u, 1 - top) + .025);
-      world.localToWorld(point);
-      point.project(camera);
-      label.x = (point.x * .5 + .5) * width;
-      label.y = (-point.y * .5 + .5) * height;
-      button.style.left = `${label.x}px`;
-      button.style.top = `${label.y}px`;
-      const offscreen = label.x < 17 || label.x > width - 17 || label.y < 17 || label.y > height - 17;
-      const crowded = camera.zoom < 1.8 && placed.some(other => Math.hypot(other.x - label.x, other.y - label.y) < 33);
-      button.hidden = offscreen || crowded;
-      if (!button.hidden) placed.push(label);
+      projectPoint(u, top, point, width, height);
+      label.x = point.x;
+      label.y = point.y;
+      const [left, topEdge, right, bottom] = hitbox;
+      projectPoint(left, topEdge, corners[0], width, height);
+      projectPoint(right, topEdge, corners[1], width, height);
+      projectPoint(right, bottom, corners[2], width, height);
+      projectPoint(left, bottom, corners[3], width, height);
+      const bounds = {
+        left: Math.max(0, Math.min(...corners.map(corner => corner.x))),
+        top: Math.max(0, Math.min(...corners.map(corner => corner.y))),
+        right: Math.min(width, Math.max(...corners.map(corner => corner.x))),
+        bottom: Math.min(height, Math.max(...corners.map(corner => corner.y))),
+      };
+      bounds.area = (bounds.right - bounds.left) * (bounds.bottom - bounds.top);
+      label.bounds = bounds;
+      button.hidden = bounds.right <= bounds.left || bounds.bottom <= bounds.top;
+      if (button.hidden) continue;
+      button.style.left = `${bounds.left}px`;
+      button.style.top = `${bounds.top}px`;
+      button.style.width = `${bounds.right - bounds.left}px`;
+      button.style.height = `${bounds.bottom - bounds.top}px`;
+      button.style.setProperty('--pin-x', `${THREE.MathUtils.clamp(label.x - bounds.left, 0, bounds.right - bounds.left)}px`);
+      button.style.setProperty('--pin-y', `${THREE.MathUtils.clamp(label.y - bounds.top, 0, bounds.bottom - bounds.top)}px`);
     }
     container.dataset.zoom = camera.zoom.toFixed(2);
     renderer.render(scene, camera);

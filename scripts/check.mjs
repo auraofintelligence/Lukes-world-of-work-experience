@@ -4,7 +4,14 @@ import {recordHTML} from '../src/content.js';
 const data=JSON.parse(fs.readFileSync('public/content/resume.json','utf8'));
 const ids=new Set();const places=new Set(data.places.map(p=>p.id));
 assert.equal(places.size,data.places.length);
-for(const p of data.places){assert(p.anchor.length===2&&p.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1));assert(data.records.some(r=>r.place===p.id));}
+for(const p of data.places){
+  assert(p.anchor.length===2&&p.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1));
+  assert(p.hitbox?.length===4&&p.hitbox.every(n=>Number.isFinite(n)&&n>=0&&n<=1),`Missing image hitbox for ${p.id}`);
+  const [left,top,right,bottom]=p.hitbox;
+  assert(left<right&&top<bottom,`Invalid hitbox for ${p.id}`);
+  assert(p.anchor[0]>=left&&p.anchor[0]<=right&&p.anchor[1]>=top&&p.anchor[1]<=bottom,`Marker outside building for ${p.id}`);
+  assert(data.records.some(r=>r.place===p.id));
+}
 for(const r of data.records){assert(!ids.has(r.id),`Duplicate ${r.id}`);ids.add(r.id);assert(places.has(r.place));assert(['work','education','volunteering'].includes(r.type));assert(r.title&&r.organisation&&r.dates&&r.summary);assert(Number.isFinite(r.sort));assert(r.sources.length);for(const ref of r.sources){const src=data.sources.find(s=>s.id===ref.id);assert(src&&ref.section);if(ref.page!==undefined)assert(ref.page>=1&&ref.page<=src.pages);}}
 const index=fs.readFileSync('index.html','utf8');
 const jobs=data.records.filter(r=>r.type==='work');

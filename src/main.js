@@ -24,9 +24,9 @@ function renderRoute() {
     $('#place-jump').append(option);
   });
   $('.route-title > span').textContent = `${data.places.length} places in one connected world`;
-  $('.instructions').textContent = 'Drag to explore · Zoom for a closer look · Choose any place';
+  $('.instructions').textContent = 'Click a building or vehicle to open its history. Drag to explore and zoom for a closer look.';
   $('#world').style.setProperty('--world-art', `url(${JSON.stringify(new URL(data.world.image, document.baseURI).href)})`);
-  $('#scene').setAttribute('aria-label', `${data.world.name}. One connected map of work, education and volunteering. Drag or use arrow keys to pan. Use plus and minus to zoom, and Home to see the whole world.`);
+  $('#scene').setAttribute('aria-label', `${data.world.name}. One connected map of work, education and volunteering. Drag or use arrow keys to pan. Use plus and minus to zoom, and Home to reset the view.`);
 }
 
 function renderTicker() {
@@ -169,7 +169,7 @@ $('#filter').addEventListener('change', filter);
 filter();
 function fallback(reason) {
   document.body.classList.add('fallback');
-  status.textContent = reason + ' Choose a place below, or read the full history.';
+  status.textContent = reason + ' Open Menu to choose a place, or read the history below.';
   $('#enter').textContent = 'Choose a place below';
   $('#enter').onclick = () => $('.places').scrollIntoView();
 }

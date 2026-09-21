@@ -1,5 +1,13 @@
 # Changes
 
+## 21 September 2026, full-width interactive artwork
+
+- Filled the browser width with the world, keeping pan and zoom for closer exploration.
+- Added broad clickable regions for all 46 buildings and vehicles, with numbered markers and hover/focus feedback. Numbers can be hidden without disabling interactions.
+- Kept dragging and pinch zoom working when a gesture starts on a building.
+- Added the Project Atlas website link to the menu.
+- Added an AI detail/sharpness refinement of the artwork. The generator retained 1536 x 1024 pixels; higher-resolution upscaling is not claimed.
+
 ## 21 September 2026, one coherent world
 
 - Replaced the separate scenes with one continuous town containing all 46 places, connected by streets and paths.
