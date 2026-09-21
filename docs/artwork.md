@@ -1,5 +1,7 @@
 # Harbour concept artwork
 
+Historical iterations below. The current site uses one continuous map, documented in [connected-artwork.md](connected-artwork.md).
+
 The UK, Australian trades and volunteering additions have their final paths and built-in generation prompts in [artwork-expansion.md](artwork-expansion.md).
 
 ## Interactive world revision

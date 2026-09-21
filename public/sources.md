@@ -6,9 +6,9 @@ The source register in content/resume.json records document titles, source hashe
 
 ## The map is still growing
 
-The current source inventory contains 28 work entries, 14 education/training entries and 7 volunteering entries. This is not the total number of jobs Luke has held. Mobil Service Station Burpengary is Luke's first job. Burpengary and Buderim Woolworths work are separate jobs. Self-directed prompt engineering and generative AI research is identified as self-directed work, not employment by a model vendor.
+The current source inventory contains 28 work entries, 14 education/training entries and 8 volunteering entries. This is not the total number of jobs Luke has held. Mobil Service Station Burpengary is Luke's first job. Burpengary and Buderim Woolworths work are separate jobs. Self-directed prompt engineering and generative AI research is identified as self-directed work, not employment by a model vendor.
 
-Every documented job has its own object across the work harbour, UK working holiday and Australian trades scenes. Temporary work is not folded into WAAP; WAAP remains its existing separate role. Sainsbury's and Tesco are identified as marquee client sites, not assumed employers. The learning village provides separate buildings for Grace Lutheran College, the University of the Sunshine Coast, TAFE, Sarina Russo, Christopher Howard Training, Evocca and Googa. iTunes University has its own building as a learning platform. Independent study and historical tickets with unnamed issuing educators occupy separate clearly described buildings.
+Every documented job has its own object in the same connected harbour town. Temporary work is not folded into WAAP; WAAP remains its existing separate role. Sainsbury's and Tesco are identified as marquee client sites, not assumed employers. Separate buildings represent Grace Lutheran College, the University of the Sunshine Coast, TAFE, Sarina Russo, Christopher Howard Training, Evocca and Googa. iTunes University has its own building as a learning platform. Independent study and historical tickets with unnamed issuing educators occupy separate clearly described buildings. Work, education and volunteering share the same map and camera.
 
 ## Corrections incorporated
 
@@ -24,6 +24,7 @@ Every documented job has its own object across the work harbour, UK working holi
 - Space Development Nexus (SDNx): ongoing volunteer AI strategy advice since 2019, each time Luke visits India. Luke's direct clarification supersedes the older CV dates.
 - North Stradbroke Island Historical Museum: full name confirmed directly by Luke. The 2024 CV records oral history transcription in 2014.
 - Island Vibe: the journal and timeline identify 2014, the timeline also identifies 2015, and the 2024 CV adds 2015/16. These are separate festival years, not continuous work.
+- Point Lookout Fishing Club: founding secretary as a volunteer, 2024 to present, directly confirmed by Luke. The wharf boathouse represents this role in the fictional world.
 
 ## Volunteering now included
 
@@ -43,4 +44,4 @@ The public work-history page at https://lukecatalyst.com/work-history/ was check
 
 ## Artwork
 
-All five views are imagined architectural metaphors, not photographs of the named employers, real school buildings or volunteer organisations. Built-in image generation produced the detailed artwork; Three.js presents it on shallow relief geometry with constrained pan, zoom and gentle motion. It is an illustrated 2.5D world, not an unrestricted reconstructed town. Generation prompts are in docs/artwork.md and docs/artwork-expansion.md in the repository. Third-party libraries retain their own licences.
+The one connected town is an imagined architectural metaphor, not a photograph of the employers, real school buildings or volunteer organisations. Tower 42's silhouette was corrected using the building's official architectural reference. Built-in image generation produced the detailed artwork; Three.js presents it on shallow relief geometry with pan and zoom. It is an illustrated 2.5D world, not an unrestricted reconstructed town. The active artwork and final prompts are documented in docs/connected-artwork.md. Earlier artwork documents are retained only as design history. Third-party libraries retain their own licences.

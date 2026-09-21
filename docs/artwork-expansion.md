@@ -1,5 +1,7 @@
 # Additional illustrated areas
 
+Historical iteration: Luke rejected separate areas as separate scenes. These assets are no longer loaded by the world. The replacement is one continuous map documented in [connected-artwork.md](connected-artwork.md).
+
 Created on 21 September 2026 with the built-in image-generation tool, using harbour-world.png as a style reference. All three final assets are stored in public/assets/ and served from the Pages origin. Marker coordinates were set after inspecting the resulting images, not copied from the proposed coordinates in these prompts. Architecture is fictional and does not depict actual organisation premises.
 
 ## UK working holiday

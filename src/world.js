@@ -1,18 +1,13 @@
 import * as THREE from 'three';
 
-// An illustrated relief scene: the original artwork is projected onto a shallow
-// mesh, preserving its composition. Camera travel is deliberately constrained;
-// a single illustration cannot supply unseen sides of buildings.
+// One illustration, one relief mesh and one camera. Every place remains on the
+// same map: travelling between records never swaps artwork or world geometry.
 export async function createWorld(container, data, onSelect, onLost) {
   const places = data.places;
-  let activeScene = 'work';
-  let sceneRequest = 0;
-  const textures = new Map();
-  const pendingTextures = new Map();
   const WIDTH = 60;
-  const HEIGHT = 40;
+  const HEIGHT = WIDTH / (data.world.aspect || 1.5);
   const scene = new THREE.Scene();
-  const camera = new THREE.OrthographicCamera(-30, 30, 20, -20, 0.1, 100);
+  const camera = new THREE.OrthographicCamera(-30, 30, HEIGHT / 2, -HEIGHT / 2, 0.1, 100);
   camera.position.set(0, 0, 55);
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
@@ -22,9 +17,7 @@ export async function createWorld(container, data, onSelect, onLost) {
 
   let texture;
   try {
-    const entry = data.scenes.find(scene => scene.id === activeScene);
-    if (!entry) throw new Error('The starting scene is missing');
-    texture = await new THREE.TextureLoader().loadAsync(new URL(entry.image, document.baseURI).href);
+    texture = await new THREE.TextureLoader().loadAsync(new URL(data.world.image, document.baseURI).href);
   } catch (error) {
     renderer.dispose();
     renderer.domElement.remove();
@@ -32,33 +25,13 @@ export async function createWorld(container, data, onSelect, onLost) {
   }
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
-  textures.set('work', texture);
-  const depthAt = (u, v) => {
-    const land = Math.exp(-((u - .77) ** 2 / .095 + (v - .48) ** 2 / .11));
-    const cliffs = Math.exp(-((u - .52) ** 2 / .022 + (v - .34) ** 2 / .026));
-    return land * 1.6 + cliffs * .6;
-  };
+  const depthAt = (u, v) => Math.sin(u * Math.PI) * Math.sin(v * Math.PI) * .65;
   const geometry = new THREE.PlaneGeometry(WIDTH, HEIGHT, 160, 108);
   const positions = geometry.attributes.position;
   const uv = geometry.attributes.uv;
   for (let i = 0; i < positions.count; i++) positions.setZ(i, depthAt(uv.getX(i), uv.getY(i)));
   geometry.computeVertexNormals();
-  const uniforms = { image: { value: texture }, time: { value: 0 }, waterMotion: { value: 1 } };
-  const material = new THREE.ShaderMaterial({
-    uniforms,
-    vertexShader: `varying vec2 vUv;
-      void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
-    fragmentShader: `uniform sampler2D image; uniform float time; uniform float waterMotion; varying vec2 vUv;
-      void main(){
-        vec2 p=vUv;
-        // Ripples stay in open water, well clear of shore and horizon.
-        float water=waterMotion*(1.-smoothstep(.15,.28,p.x))*smoothstep(.02,.15,p.y)*(1.-smoothstep(.58,.68,p.y));
-        p.x+=sin(p.y*160.+time*.55)*.00019*water;
-        p.y+=sin(p.x*130.-time*.35)*.00014*water;
-        gl_FragColor=texture2D(image,p);
-        #include <colorspace_fragment>
-      }`,
-  });
+  const material = new THREE.MeshBasicMaterial({ map: texture });
   const relief = new THREE.Mesh(geometry, material);
   const world = new THREE.Group();
   world.add(relief);
@@ -68,7 +41,8 @@ export async function createWorld(container, data, onSelect, onLost) {
     const button = document.createElement('button');
     button.className = 'pin';
     button.dataset.place = place.id;
-    button.setAttribute('aria-label', place.name);
+    button.dataset.kind = place.kind;
+    button.setAttribute('aria-label', `${index + 1}. ${place.name}`);
     button.innerHTML = `<span class="pin-number">${String(index + 1).padStart(2, '0')}</span>`;
     const name = document.createElement('span');
     name.className = 'pin-name';
@@ -76,40 +50,40 @@ export async function createWorld(container, data, onSelect, onLost) {
     button.append(name);
     button.onclick = () => onSelect(index);
     document.querySelector('#labels').append(button);
-    return { button, place, point: new THREE.Vector3() };
+    return { button, place, point: new THREE.Vector3(), x: 0, y: 0 };
   });
 
   let paused = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let visible = true;
   let stopped = false;
   let lastTime = 0;
-  let time = 0;
   let drag;
   let moved = false;
   let target = { x: 0, y: 0, zoom: 1 };
   const pointer = { x: 0, y: 0 };
-  const raycaster = new THREE.Raycaster();
-  const mouse = new THREE.Vector2();
   const contacts = new Map();
   let pinchDistance = 0;
 
   function limits() {
     const halfW = camera.right / target.zoom;
     const halfH = camera.top / target.zoom;
-    const edgeX = Math.max(0, WIDTH / 2 - halfW - .08);
-    const edgeY = Math.max(0, HEIGHT / 2 - halfH - .08);
+    const edgeX = Math.max(0, WIDTH / 2 - halfW);
+    const edgeY = Math.max(0, HEIGHT / 2 - halfH);
     target.x = THREE.MathUtils.clamp(target.x, -edgeX, edgeX);
     target.y = THREE.MathUtils.clamp(target.y, -edgeY, edgeY);
   }
   function home() {
-    target = { x: container.clientWidth < 700 ? 8 : 0, y: 0, zoom: 1.015 };
+    target = { x: 0, y: 0, zoom: 1 };
     limits();
+    labels.forEach(({ button }) => button.classList.remove('selected'));
   }
   function resize() {
     const width = container.clientWidth;
     const height = container.clientHeight;
     const aspect = width / height;
-    const halfH = Math.min(HEIGHT / 2, WIDTH / (2 * aspect));
+    // Contain rather than cover: the overview includes all four image edges on
+    // every screen, including portrait phones. The extra 4% keeps pins in reach.
+    const halfH = Math.max(HEIGHT / 2, WIDTH / (2 * aspect)) * 1.04;
     camera.left = -halfH * aspect;
     camera.right = halfH * aspect;
     camera.top = halfH;
@@ -120,26 +94,30 @@ export async function createWorld(container, data, onSelect, onLost) {
   }
   resize();
   home();
-  camera.position.x = target.x;
-  camera.position.y = target.y;
+  // Start portrait phones close enough to fill the screen with the town.
+  // Reset and the Home key still deliberately return to the complete overview.
+  if (container.clientWidth < 700) {
+    target.zoom = Math.min(6, Math.max(1, camera.right * 2 / WIDTH, camera.top * 2 / HEIGHT));
+    limits();
+  }
   camera.zoom = target.zoom;
   camera.updateProjectionMatrix();
   new ResizeObserver(resize).observe(container);
   new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; }).observe(container);
 
   function zoom(factor) {
-    target.zoom = THREE.MathUtils.clamp(target.zoom * factor, 1.015, 2.8);
+    target.zoom = THREE.MathUtils.clamp(target.zoom * factor, 1, 6);
     limits();
   }
   const canvas = renderer.domElement;
   canvas.addEventListener('wheel', event => {
-    // The page still scrolls normally outside the explicitly focused scene.
     if (document.activeElement !== container) return;
     event.preventDefault();
     zoom(Math.exp(-event.deltaY * .001));
   }, { passive: false });
   canvas.addEventListener('pointerdown', event => {
     if (event.button !== 0) return;
+    document.body.classList.add('world-active');
     container.focus({ preventScroll: true });
     canvas.setPointerCapture(event.pointerId);
     contacts.set(event.pointerId, { x: event.clientX, y: event.clientY });
@@ -177,16 +155,13 @@ export async function createWorld(container, data, onSelect, onLost) {
     contacts.delete(event.pointerId);
     if (!moved && drag) {
       const rect = container.getBoundingClientRect();
-      mouse.set((event.clientX - rect.left) / rect.width * 2 - 1, -(event.clientY - rect.top) / rect.height * 2 + 1);
-      raycaster.setFromCamera(mouse, camera);
-      const hit = raycaster.intersectObject(relief)[0];
-      if (hit) {
-        const candidates = places.map((place, index) => ({ index, scene: place.scene, distance: Math.hypot((hit.uv.x - place.anchor[0]) * 1.5, 1 - hit.uv.y - place.anchor[1]) })).filter(p => p.scene === activeScene);
-        candidates.sort((a, b) => a.distance - b.distance);
-        if (candidates[0]?.distance < .064) onSelect(candidates[0].index);
-      }
+      const x = event.clientX - rect.left, y = event.clientY - rect.top;
+      const nearest = labels.map((label, index) => ({ index, distance: Math.hypot(label.x - x, label.y - y) }))
+        .sort((a, b) => a.distance - b.distance)[0];
+      if (nearest?.distance < 26) onSelect(nearest.index);
     }
-    drag = undefined;
+    const remaining = [...contacts.values()][0];
+    drag = remaining ? { x: remaining.x, y: remaining.y, cameraX: target.x, cameraY: target.y } : undefined;
     pinchDistance = 0;
   });
   canvas.addEventListener('pointercancel', () => { drag = undefined; contacts.clear(); pinchDistance = 0; });
@@ -199,87 +174,67 @@ export async function createWorld(container, data, onSelect, onLost) {
     onLost();
   });
   container.addEventListener('keydown', event => {
-    const directions = { ArrowLeft: [-1.6, 0], ArrowRight: [1.6, 0], ArrowUp: [0, 1.6], ArrowDown: [0, -1.6] };
+    const directions = { ArrowLeft: [-2, 0], ArrowRight: [2, 0], ArrowUp: [0, 2], ArrowDown: [0, -2] };
     if (directions[event.key]) {
       event.preventDefault();
       target.x += directions[event.key][0] / target.zoom;
       target.y += directions[event.key][1] / target.zoom;
       limits();
-    } else if (event.key === '+' || event.key === '=') zoom(1.15);
-    else if (event.key === '-') zoom(1 / 1.15);
-    else if (event.key === 'Home') home();
+    } else if (event.key === '+' || event.key === '=') { event.preventDefault(); zoom(1.3); }
+    else if (event.key === '-') { event.preventDefault(); zoom(1 / 1.3); }
+    else if (event.key === 'Home') { event.preventDefault(); home(); }
   });
 
   renderer.setAnimationLoop(ms => {
     const dt = Math.min((ms - lastTime) / 1000, .05);
     lastTime = ms;
     if (stopped || !visible || document.hidden) return;
-    if (!paused) time += dt;
-    uniforms.time.value = time;
     const ease = paused ? 1 : 1 - Math.exp(-dt * 7);
     camera.position.x = THREE.MathUtils.lerp(camera.position.x, target.x, ease);
     camera.position.y = THREE.MathUtils.lerp(camera.position.y, target.y, ease);
     camera.zoom = THREE.MathUtils.lerp(camera.zoom, target.zoom, ease);
     camera.updateProjectionMatrix();
-    world.rotation.y = THREE.MathUtils.lerp(world.rotation.y, paused ? 0 : pointer.x * .007, ease);
-    world.rotation.x = THREE.MathUtils.lerp(world.rotation.x, paused ? 0 : pointer.y * .005, ease);
+    // Gentle depth responds to the pointer only after zooming. The full overview
+    // stays still so it consistently shows the same complete, connected map.
+    const depth = target.zoom > 1.05 && !paused;
+    world.rotation.y = THREE.MathUtils.lerp(world.rotation.y, depth ? pointer.x * .004 : 0, ease);
+    world.rotation.x = THREE.MathUtils.lerp(world.rotation.x, depth ? pointer.y * .003 : 0, ease);
     world.updateMatrixWorld();
     const width = container.clientWidth;
     const height = container.clientHeight;
-    for (const { button, place, point } of labels) {
+    const placed = [];
+    // Selected and keyboard-focused markers take priority when overview labels
+    // overlap. Every individual place stays available in the complete route.
+    const ordered = [...labels].sort((a, b) => Number(b.button.classList.contains('selected') || document.activeElement === b.button) - Number(a.button.classList.contains('selected') || document.activeElement === a.button));
+    for (const label of ordered) {
+      const { button, place, point } = label;
       const [u, top] = place.anchor;
       point.set((u - .5) * WIDTH, (.5 - top) * HEIGHT, depthAt(u, 1 - top) + .025);
       world.localToWorld(point);
       point.project(camera);
-      const x = (point.x * .5 + .5) * width;
-      const y = (-point.y * .5 + .5) * height;
-      button.style.left = `${x}px`;
-      button.style.top = `${y}px`;
-      button.hidden = place.scene !== activeScene || x < 25 || x > width - 25 || y < 80 || y > height - 100;
+      label.x = (point.x * .5 + .5) * width;
+      label.y = (-point.y * .5 + .5) * height;
+      button.style.left = `${label.x}px`;
+      button.style.top = `${label.y}px`;
+      const offscreen = label.x < 17 || label.x > width - 17 || label.y < 17 || label.y > height - 17;
+      const crowded = camera.zoom < 1.8 && placed.some(other => Math.hypot(other.x - label.x, other.y - label.y) < 33);
+      button.hidden = offscreen || crowded;
+      if (!button.hidden) placed.push(label);
     }
+    container.dataset.zoom = camera.zoom.toFixed(2);
     renderer.render(scene, camera);
   });
 
-  async function setScene(id) {
-    const request = ++sceneRequest;
-    const entry = data.scenes.find(s => s.id === id);
-    if (!entry) throw new Error('Unknown world scene');
-    if (activeScene === id) return;
-    if (!textures.has(id)) {
-      if (!pendingTextures.has(id)) {
-        const loading = new THREE.TextureLoader().loadAsync(new URL(entry.image, document.baseURI).href).then(next => {
-          next.colorSpace = THREE.SRGBColorSpace;
-          next.anisotropy = texture.anisotropy;
-          textures.set(id, next);
-        }).finally(() => pendingTextures.delete(id));
-        pendingTextures.set(id, loading);
-      }
-      try { await pendingTextures.get(id); }
-      catch (error) {
-        if (request !== sceneRequest) return;
-        throw error;
-      }
-    }
-    if (request !== sceneRequest) return;
-    activeScene = id;
-    uniforms.image.value = textures.get(id);
-    uniforms.waterMotion.value = id === 'work' ? 1 : 0;
-    home();
-    camera.position.x = target.x;
-    camera.position.y = target.y;
-    camera.zoom = target.zoom;
-  }
-
   return {
-    setScene,
     pause(value) { paused = value; },
     zoom,
     reset: home,
     focus(place) {
       const [u, top] = place.anchor;
-      target.zoom = container.clientWidth < 700 ? 1.5 : 1.85;
-      target.x = (u - .5) * WIDTH + (container.clientWidth < 700 ? 0 : camera.right / target.zoom * .33);
-      target.y = (.5 - top) * HEIGHT;
+      const mobile = container.clientWidth < 700;
+      target.zoom = mobile ? 4 : 2.4;
+      target.x = (u - .5) * WIDTH + (mobile ? 0 : camera.right / target.zoom * .35);
+      target.y = (.5 - top) * HEIGHT - (mobile ? camera.top / target.zoom * .45 : 0);
       limits();
       labels.forEach(label => label.button.classList.toggle('selected', label.place.id === place.id));
     },

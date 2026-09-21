@@ -18,8 +18,11 @@ assert(data.records.every(r=>!/founder|solopreneur/i.test(r.title)), 'Startup ro
 assert.equal(jobs.toSorted((a,b)=>a.sort-b.sort)[0].id,'mobil-burpengary','Mobil must be the first work role');
 assert(data.records.find(r=>r.id==='sdnx').dates.startsWith('2019 to present'));
 assert.equal(data.records.find(r=>r.id==='museum-volunteering').organisation,'North Stradbroke Island Historical Museum');
-for(const s of data.scenes)assert(fs.existsSync('public/'+s.image.replace(/^\.\//,'')),`Missing scene artwork ${s.image}`);
-for(const p of data.places)assert(data.scenes.some(s=>s.id===p.scene),`Unknown scene ${p.scene}`);
+assert(data.world?.image && Number.isFinite(data.world.aspect),'One world image and aspect ratio are required');
+assert(!data.scenes,'Multiple scenes are not permitted');
+assert(data.places.every(p=>!('scene' in p)),'All places must share one world');
+assert(fs.existsSync('public/'+data.world.image.replace(/^\.\//,'')),'Missing connected world artwork');
+assert(!index.includes('scene-switch'),'Scene tabs must not return');
 assert(data.records.find(r=>r.id==='evocca').note.includes('Not completed'));
 assert(data.records.find(r=>r.id==='automotive-study').title.includes('AUR21699'));
 assert.equal(data.records.find(r=>r.id==='yorke').end,'2022-12-01');

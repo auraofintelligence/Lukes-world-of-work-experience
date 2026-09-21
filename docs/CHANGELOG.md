@@ -1,5 +1,13 @@
 # Changes
 
+## 21 September 2026, one coherent world
+
+- Replaced the separate scenes with one continuous town containing all 46 places, connected by streets and paths.
+- Corrected Tower 42 using its official architectural reference, with straight sides and an angular crown.
+- Moved titles, explanations and the complete place list into a menu, with numbered markers optional.
+- Replaced the fixed job strip with a rolling, pausable jobs ticker that can be hidden.
+- Added Point Lookout Fishing Club founding secretary, 2024 to present, to volunteering and mapped it to its own wharf boathouse.
+
 ## 21 September 2026, missing jobs and volunteering
 
 - Added Mobil Service Station Burpengary as Luke's first job, five UK temporary roles and five further Australian trades roles. WAAP remains its existing separate record.

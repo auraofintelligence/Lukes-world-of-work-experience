@@ -1,6 +1,6 @@
 # Luke's world of work
 
-A richly illustrated world built from Luke Hayes' work, education and volunteering. Every identified job has a separate building or vehicle; each named educator has a separate building. The current inventory contains 28 work records, 14 education/training records and 7 volunteering records across 45 places in five scenes. It remains an expanding history, not a complete lifetime count. The settings are fictional; the facts come from supplied resumes, Luke's journal and his direct corrections.
+One connected illustrated harbour town built from Luke Hayes' work, education and volunteering. Every identified job has a separate building or vehicle; each named educator has a separate building. All 46 places occupy the same continuous map, containing 28 work records, 14 education/training records and 8 volunteering records. It remains an expanding history, not a complete lifetime count. The geography is fictional; the facts come from supplied resumes, Luke's journal and his direct corrections.
 
 Live: https://auraofintelligence.github.io/Lukes-world-of-work-experience/
 
@@ -13,7 +13,7 @@ npm ci
 npm run dev
 ```
 
-Open the local address shown. Switch between Work harbour, UK working holiday, Australian trades, Learning village and Volunteering. Drag to pan, use buttons or pinch to zoom, and select a building, numbered marker or place button. When the scene is focused, the wheel zooms, arrow keys pan, +/- zoom and Home resets the view. The guided route has previous/next buttons. Escape closes a record. Discovery progress lasts for this visit only.
+Open the local address shown. The world starts clear, with text behind Menu and a slim rolling jobs ticker. Select a building, vehicle, ticker job or menu place to open its record. Drag to pan and use buttons or pinch to zoom. When the world is focused, the wheel zooms, arrow keys pan, +/- zoom and Home shows the whole map. Every selection moves through the same world; no image or scene is swapped. Escape closes a record or menu. Discovery progress lasts for this visit only.
 
 ## Build and check
 
@@ -25,7 +25,7 @@ npm run preview
 
 The build creates `dist/`, generates a complete readable no-JavaScript history in index.html and an object-to-fact content map. A GitHub Actions Pages workflow builds and publishes on pushes to main. Set repository Settings > Pages > Source to GitHub Actions. No backend, account, runtime API or CDN is needed.
 
-The fallback works without WebGL or JavaScript. Mobile has numbered scene buttons matching the scrollable place strip. Reduced-motion preferences pause ambient animation and camera easing. All factual data is escaped before rendering.
+The fallback works without WebGL or JavaScript. The menu contains all places and can show numbered markers or hide the jobs ticker. The ticker pauses on hover or keyboard focus and has an explicit pause control. Reduced-motion preferences pause movement. All factual data is escaped before rendering.
 
 ## Content
 
@@ -35,9 +35,9 @@ Luke approved including volunteering on 21 September 2026. Intermittent communit
 
 ## Design and assets
 
-The generated artwork is the actual visual surface of the experience, with individually mapped buildings and vehicles. Three.js projects each illustration onto a shallow relief mesh. Restrained parallax, open-water movement, camera pan and zoom preserve the detailed illustration. This is an illustrated 2.5D world, not a reconstructed town with unseen sides or unrestricted walking. The application remains client-side and static.
+The generated artwork is the actual visual surface of the experience, with individually mapped buildings and vehicles. Three.js projects the single illustration onto a shallow relief mesh. Camera pan and zoom preserve the detailed illustration. This is an illustrated 2.5D world, not a reconstructed town with unseen sides or unrestricted walking. The application remains client-side and static.
 
-The original concept is public/assets/harbour-concept.png. Scene art is stored beside it: harbour-world.png, uk-working-holiday.png, australian-trades.png, learning-village.png and community-volunteering.png. Prompts and the built-in generation method are in docs/artwork.md. The SVG favicon is code-drawn. Online learning platforms, personal study and workplace tickets with unnamed issuers are distinguished from named educators.
+The active artwork is public/assets/connected-world.png. Tower 42 uses an official architectural photograph as reference for its straight sides, vertical ribs and angular crown. The final built-in generation prompt and reference links are in docs/connected-artwork.md. Earlier artwork is retained as design history but is not loaded as alternate worlds. The SVG favicon is code-drawn. Online learning platforms, personal study and workplace tickets with unnamed issuers are distinguished from named educators.
 
 ## Maintenance
 

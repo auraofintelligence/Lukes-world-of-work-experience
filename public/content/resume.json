@@ -1,7 +1,7 @@
 {
   "name": "Luke Hayes",
   "updated": "2026-09-21",
-  "scope": "An expanding record of work, education and volunteering. Each identified job has its own object, each named educator its own building and each volunteer role its own place. Startup ventures remain deferred. This is not claimed to be the complete history.",
+  "scope": "One connected illustrated world containing work, education and volunteering. Each job has its own building or vehicle, each educator its own building and each volunteer role its own place. Startup ventures remain deferred. This is an expanding history, not a complete lifetime count.",
   "sources": [
     {
       "id": "cv2024",
@@ -35,6 +35,12 @@
       "title": "Additional work and volunteering supplied by Luke on 21 September 2026",
       "kind": "user",
       "note": "Mobil identified as first job; UK temporary work and Australian trades added. Luke confirmed the museum name and Space Development Nexus volunteering since 2019, ongoing during visits to India. Missing employer names and dates remain unconfirmed."
+    },
+    {
+      "id": "fishing-club-20260921",
+      "kind": "user",
+      "title": "Point Lookout Fishing Club role supplied by Luke on 21 September 2026",
+      "note": "Luke confirmed founding secretary as a volunteer role from 2024 to current."
     }
   ],
   "places": [
@@ -44,11 +50,10 @@
       "object": "Service station with drinks fridges",
       "hint": "Service station assistant",
       "anchor": [
-        0.447,
-        0.25
+        0.08464,
+        0.4043
       ],
-      "kind": "work",
-      "scene": "trades"
+      "kind": "work"
     },
     {
       "id": "woolworths-burpengary",
@@ -56,22 +61,20 @@
       "object": "Grocery shop with striped awning",
       "hint": "Checkouts, customer service and service-station closing",
       "anchor": [
-        0.389,
-        0.55
+        0.1862,
+        0.41016
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "woolworths-buderim",
       "name": "Woolworths Buderim",
-      "object": "Separate timber provisions store on the wharf",
+      "object": "Blue-roof provisions shop",
       "anchor": [
-        0.487,
-        0.754
+        0.26823,
+        0.41504
       ],
       "kind": "work",
-      "scene": "work",
       "hint": "Perishables assistant"
     },
     {
@@ -80,11 +83,10 @@
       "object": "Red-roof mechanic workshop",
       "hint": "Small vehicle mechanic and wheel alignment specialist",
       "anchor": [
-        0.671,
-        0.525
+        0.39323,
+        0.4082
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "uk-bar-work",
@@ -92,23 +94,21 @@
       "object": "Brick pub with green trim",
       "hint": "Temporary bar work",
       "anchor": [
-        0.392,
-        0.324
+        0.09961,
+        0.29492
       ],
-      "kind": "work",
-      "scene": "uk"
+      "kind": "work"
     },
     {
       "id": "tower-42",
       "name": "Tower 42 demolition",
-      "object": "Office tower with strip-out worksite",
+      "object": "Straight-sided Tower 42 with vertical metal ribs and an angular crown",
       "hint": "Temporary office demolition work",
       "anchor": [
-        0.851,
-        0.532
+        0.15299,
+        0.11719
       ],
-      "kind": "work",
-      "scene": "uk"
+      "kind": "work"
     },
     {
       "id": "gift-card-factory",
@@ -116,11 +116,10 @@
       "object": "Gift-card factory with packing tables",
       "hint": "Temporary gift-card factory work",
       "anchor": [
-        0.653,
-        0.313
+        0.21094,
+        0.29688
       ],
-      "kind": "work",
-      "scene": "uk"
+      "kind": "work"
     },
     {
       "id": "waap",
@@ -128,11 +127,10 @@
       "object": "Timber festival stage",
       "hint": "Festival worker",
       "anchor": [
-        0.487,
-        0.347
+        0.51888,
+        0.40918
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "uk-storage-marquees",
@@ -140,11 +138,10 @@
       "object": "White storage marquee with pallets",
       "hint": "Temporary storage marquee installations",
       "anchor": [
-        0.502,
-        0.488
+        0.29362,
+        0.29199
       ],
-      "kind": "work",
-      "scene": "uk"
+      "kind": "work"
     },
     {
       "id": "horse-stables",
@@ -152,11 +149,10 @@
       "object": "Modular horse stable installation",
       "hint": "Temporary horse stable installations",
       "anchor": [
-        0.825,
-        0.218
+        0.39779,
+        0.29883
       ],
-      "kind": "work",
-      "scene": "uk"
+      "kind": "work"
     },
     {
       "id": "sheet-metal-roofing",
@@ -164,11 +160,10 @@
       "object": "Building with a sheet-metal roof being installed",
       "hint": "Trade assistant to a sheet-metal roofer",
       "anchor": [
-        0.542,
-        0.587
+        0.5013,
+        0.30176
       ],
-      "kind": "work",
-      "scene": "trades"
+      "kind": "work"
     },
     {
       "id": "moreton",
@@ -176,11 +171,10 @@
       "object": "Separate white festival production marquee",
       "hint": "Festival worker and general labourer",
       "anchor": [
-        0.578,
-        0.366
+        0.61133,
+        0.43164
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "shopfitting",
@@ -188,11 +182,10 @@
       "object": "Open-front shopfitting workshop",
       "hint": "Intermittent shopfitting trade assistant",
       "anchor": [
-        0.446,
-        0.421
+        0.58073,
+        0.3125
       ],
-      "kind": "work",
-      "scene": "trades"
+      "kind": "work"
     },
     {
       "id": "queensland-rail",
@@ -200,11 +193,10 @@
       "object": "Yellow railway maintenance train",
       "hint": "Apprentice traction rail powerlinesman",
       "anchor": [
-        0.301,
-        0.377
+        0.11914,
+        0.61914
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "skystar",
@@ -212,11 +204,10 @@
       "object": "Passenger aircraft on the airport apron",
       "hint": "Airside services, check-in, boarding and customs liaison",
       "anchor": [
-        0.506,
-        0.203
+        0.70833,
+        0.17285
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "darwin-semi-trailers",
@@ -224,11 +215,10 @@
       "object": "Semi-trailer repair workshop",
       "hint": "Trade assistant to a semi-trailer mechanic",
       "anchor": [
-        0.832,
-        0.481
+        0.6901,
+        0.3125
       ],
-      "kind": "work",
-      "scene": "trades"
+      "kind": "work"
     },
     {
       "id": "ace-tree-services",
@@ -236,11 +226,10 @@
       "object": "Tree-service truck with chipper",
       "hint": "Ground crew and truck driver",
       "anchor": [
-        0.822,
-        0.329
+        0.27995,
+        0.64844
       ],
-      "kind": "work",
-      "scene": "trades"
+      "kind": "work"
     },
     {
       "id": "hume-concrete",
@@ -248,11 +237,10 @@
       "object": "Precast concrete culvert yard",
       "hint": "Skilled labourer, welding precast concrete culverts",
       "anchor": [
-        0.711,
-        0.187
+        0.78906,
+        0.32227
       ],
-      "kind": "work",
-      "scene": "trades"
+      "kind": "work"
     },
     {
       "id": "ausblast",
@@ -260,11 +248,10 @@
       "object": "Yellow industrial service truck",
       "hint": "Trade assistant painter and blaster",
       "anchor": [
-        0.899,
-        0.431
+        0.38281,
+        0.66406
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "australia-post",
@@ -272,23 +259,21 @@
       "object": "Red mail delivery van",
       "hint": "Van and HR truck driver, mail delivery",
       "anchor": [
-        0.449,
-        0.614
+        0.46354,
+        0.67578
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "kirby",
       "name": "Kirby",
-      "object": "Cream demonstration van with a vacuum cleaner",
+      "object": "Cream demonstration van beside a vacuum cleaner",
       "hint": "Door-to-door demonstrator and salesman",
       "anchor": [
-        0.536,
-        0.619
+        0.52799,
+        0.68555
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "viande",
@@ -296,11 +281,10 @@
       "object": "White refrigerated delivery truck",
       "hint": "Meat warehouse and deliveries",
       "anchor": [
-        0.85,
-        0.548
+        0.62826,
+        0.68359
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "owner-builder",
@@ -308,11 +292,10 @@
       "object": "Unfinished timber house on the hill",
       "hint": "General labourer",
       "anchor": [
-        0.828,
-        0.145
+        0.82357,
+        0.1875
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "maringa",
@@ -320,11 +303,10 @@
       "object": "Green-roof farm office",
       "hint": "Web designer and administration",
       "anchor": [
-        0.447,
-        0.468
+        0.79883,
+        0.43457
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "americold",
@@ -332,11 +314,10 @@
       "object": "Sage-green distribution warehouse",
       "hint": "Frozen food distribution warehouse picker and packer",
       "anchor": [
-        0.745,
-        0.352
+        0.90495,
+        0.30273
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "qa",
@@ -344,11 +325,10 @@
       "object": "Glass-fronted telephone research office",
       "hint": "Outbound call centre computer-aided phone interviewer",
       "anchor": [
-        0.737,
-        0.244
+        0.70833,
+        0.42188
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "yorke",
@@ -356,22 +336,20 @@
       "object": "Orange forklift beside the concrete building site",
       "hint": "Skilled construction labourer and forklift driver",
       "anchor": [
-        0.961,
-        0.356
+        0.90951,
+        0.17578
       ],
-      "kind": "work",
-      "scene": "work"
+      "kind": "work"
     },
     {
       "id": "prompt-research",
       "name": "Generative AI research",
-      "object": "Small timber research studio beside the wharf",
+      "object": "Warm timber AI research studio",
       "anchor": [
-        0.391,
-        0.735
+        0.90495,
+        0.41406
       ],
       "kind": "work",
-      "scene": "work",
       "hint": "Prompt engineer and generative AI researcher"
     },
     {
@@ -379,11 +357,10 @@
       "name": "Grace Lutheran College",
       "object": "Red-brick high school with a small bell tower",
       "anchor": [
-        0.365,
-        0.439
+        0.25391,
+        0.16602
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Education and training at Grace Lutheran College"
     },
     {
@@ -391,11 +368,10 @@
       "name": "Googa",
       "object": "Outdoor-education lodge",
       "anchor": [
-        0.829,
-        0.741
+        0.61263,
+        0.19238
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Education and training at Googa"
     },
     {
@@ -403,11 +379,10 @@
       "name": "University of the Sunshine Coast",
       "object": "Sandstone university hall",
       "anchor": [
-        0.591,
-        0.591
+        0.35807,
+        0.16309
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Education and training at University of the Sunshine Coast"
     },
     {
@@ -415,11 +390,10 @@
       "name": "TAFE",
       "object": "Technical college with workshop and computer classroom",
       "anchor": [
-        0.819,
-        0.463
+        0.45052,
+        0.16504
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Education and training at TAFE"
     },
     {
@@ -427,11 +401,10 @@
       "name": "Workplace training records",
       "object": "Cream training records building",
       "anchor": [
-        0.4,
-        0.216
+        0.48568,
+        0.58203
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Historical tickets with issuing educators not identified"
     },
     {
@@ -439,11 +412,10 @@
       "name": "Sarina Russo",
       "object": "Business college with a timber verandah",
       "anchor": [
-        0.595,
-        0.397
+        0.52083,
+        0.18359
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Education and training at Sarina Russo"
     },
     {
@@ -451,11 +423,10 @@
       "name": "Christopher Howard Training",
       "object": "Green-roof seminar and training house",
       "anchor": [
-        0.444,
-        0.326
+        0.0931,
+        0.52539
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Education and training at Christopher Howard Training"
     },
     {
@@ -463,11 +434,10 @@
       "name": "iTunes University",
       "object": "Media learning library",
       "anchor": [
-        0.601,
-        0.209
+        0.30013,
+        0.54199
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Learning platform and informal study"
     },
     {
@@ -475,11 +445,10 @@
       "name": "Independent study",
       "object": "Independent-study cottage",
       "anchor": [
-        0.861,
-        0.184
+        0.4082,
+        0.5625
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Self-directed learning; no awarded qualification claimed"
     },
     {
@@ -487,11 +456,10 @@
       "name": "Evocca",
       "object": "Game-design school with computer studio",
       "anchor": [
-        0.755,
-        0.316
+        0.19792,
+        0.53223
       ],
       "kind": "education",
-      "scene": "education",
       "hint": "Education and training at Evocca"
     },
     {
@@ -500,11 +468,10 @@
       "object": "Local history museum with archive desk",
       "hint": "Oral history transcription volunteer",
       "anchor": [
-        0.394,
-        0.31
+        0.58073,
+        0.56445
       ],
-      "kind": "volunteering",
-      "scene": "community"
+      "kind": "volunteering"
     },
     {
       "id": "island-vibe",
@@ -512,11 +479,10 @@
       "object": "Timber music-festival stage",
       "hint": "Festival setup and site-management volunteer",
       "anchor": [
-        0.6,
-        0.4
+        0.70833,
+        0.55664
       ],
-      "kind": "volunteering",
-      "scene": "community"
+      "kind": "volunteering"
     },
     {
       "id": "quandamooka-festival",
@@ -524,11 +490,10 @@
       "object": "Open-sided coastal event pavilion",
       "hint": "Web design and event-site volunteer",
       "anchor": [
-        0.856,
-        0.405
+        0.80469,
+        0.57617
       ],
-      "kind": "volunteering",
-      "scene": "community"
+      "kind": "volunteering"
     },
     {
       "id": "community-web-design",
@@ -536,11 +501,10 @@
       "object": "Web-design cottage with computer desks",
       "hint": "Intermittent community web designer",
       "anchor": [
-        0.849,
-        0.206
+        0.72786,
+        0.70605
       ],
-      "kind": "volunteering",
-      "scene": "community"
+      "kind": "volunteering"
     },
     {
       "id": "myriad",
@@ -548,11 +512,10 @@
       "object": "Glass-fronted technology conference hall",
       "hint": "Assistant to the site manager, volunteer",
       "anchor": [
-        0.466,
-        0.57
+        0.91146,
+        0.55273
       ],
-      "kind": "volunteering",
-      "scene": "community"
+      "kind": "volunteering"
     },
     {
       "id": "sdnx",
@@ -560,11 +523,10 @@
       "object": "AI strategy and space-learning studio",
       "hint": "Artificial intelligence strategy adviser, volunteer",
       "anchor": [
-        0.792,
-        0.638
+        0.82031,
+        0.68164
       ],
-      "kind": "volunteering",
-      "scene": "community"
+      "kind": "volunteering"
     },
     {
       "id": "meals-on-wheels",
@@ -572,11 +534,21 @@
       "object": "Meal-delivery van with insulated trays",
       "hint": "Aged-care meal delivery volunteer",
       "anchor": [
-        0.611,
-        0.21
+        0.92773,
+        0.68457
       ],
-      "kind": "volunteering",
-      "scene": "community"
+      "kind": "volunteering"
+    },
+    {
+      "id": "point-lookout-fishing-club",
+      "name": "Point Lookout Fishing Club",
+      "object": "Timber fishing-club boathouse on the wharf",
+      "hint": "Founding secretary, 2024 to present",
+      "anchor": [
+        0.515,
+        0.766
+      ],
+      "kind": "volunteering"
     }
   ],
   "records": [
@@ -1713,43 +1685,24 @@
         }
       ],
       "note": ""
-    }
-  ],
-  "scenes": [
-    {
-      "id": "work",
-      "name": "Work harbour",
-      "image": "./assets/harbour-world.png",
-      "heading": "A working life.\nA world to explore.",
-      "routeLabel": "Every job has its own place"
     },
     {
-      "id": "uk",
-      "name": "UK working holiday",
-      "image": "./assets/uk-working-holiday.png",
-      "heading": "A working\nholiday.",
-      "routeLabel": "Temporary jobs, each with its own place"
-    },
-    {
-      "id": "trades",
-      "name": "Australian trades",
-      "image": "./assets/australian-trades.png",
-      "heading": "First jobs.\nHands-on trades.",
-      "routeLabel": "From the first job to the workshop floor"
-    },
-    {
-      "id": "education",
-      "name": "Learning village",
-      "image": "./assets/learning-village.png",
-      "heading": "A lifetime\nof learning.",
-      "routeLabel": "A building for each educator"
-    },
-    {
-      "id": "community",
-      "name": "Volunteering",
-      "image": "./assets/community-volunteering.png",
-      "heading": "Time given.\nCommunity built.",
-      "routeLabel": "Volunteering and community work"
+      "id": "point-lookout-fishing-club",
+      "type": "volunteering",
+      "place": "point-lookout-fishing-club",
+      "title": "Founding secretary, volunteer",
+      "organisation": "Point Lookout Fishing Club",
+      "location": "Point Lookout",
+      "dates": "2024 to present",
+      "sort": 2024,
+      "summary": "Founding secretary of the Point Lookout Fishing Club, volunteering from 2024 to the present.",
+      "sources": [
+        {
+          "id": "fishing-club-20260921",
+          "section": "Founding secretary, 2024 to current, directly confirmed by Luke"
+        }
+      ],
+      "note": ""
     }
   ],
   "unresolved": [
@@ -1763,5 +1716,10 @@
       },
       "needs": "Confirm dates and whether this was volunteering, paid work or a personal project before placing it in a category."
     }
-  ]
+  ],
+  "world": {
+    "name": "Luke's world",
+    "image": "./assets/connected-world.png",
+    "aspect": 1.5
+  }
 }

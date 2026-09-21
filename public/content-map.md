@@ -1,10 +1,10 @@
 # World objects and résumé facts
 
-The harbour is fictional. Every factual entry is sourced in public/content/resume.json. Decorations such as the boat, trees and jetty are scenery and make no biographical claim.
+All places share one continuous fictional harbour town. Every factual entry is sourced in public/content/resume.json. Decorations such as boats, trees and jetties are scenery and make no biographical claim.
 
 ## Mobil Burpengary
 
-Scene: trades. Object: Service station with drinks fridges. Artwork anchor (x/y, 0 to 1): 0.447, 0.25.
+Object: Service station with drinks fridges. Position on the shared world artwork (x/y, 0 to 1): 0.08464, 0.4043.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -12,7 +12,7 @@ Scene: trades. Object: Service station with drinks fridges. Artwork anchor (x/y,
 
 ## Woolworths Burpengary
 
-Scene: work. Object: Grocery shop with striped awning. Artwork anchor (x/y, 0 to 1): 0.389, 0.55.
+Object: Grocery shop with striped awning. Position on the shared world artwork (x/y, 0 to 1): 0.1862, 0.41016.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -20,7 +20,7 @@ Scene: work. Object: Grocery shop with striped awning. Artwork anchor (x/y, 0 to
 
 ## Woolworths Buderim
 
-Scene: work. Object: Separate timber provisions store on the wharf. Artwork anchor (x/y, 0 to 1): 0.487, 0.754.
+Object: Blue-roof provisions shop. Position on the shared world artwork (x/y, 0 to 1): 0.26823, 0.41504.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -28,7 +28,7 @@ Scene: work. Object: Separate timber provisions store on the wharf. Artwork anch
 
 ## Drive Safe Service
 
-Scene: work. Object: Red-roof mechanic workshop. Artwork anchor (x/y, 0 to 1): 0.671, 0.525.
+Object: Red-roof mechanic workshop. Position on the shared world artwork (x/y, 0 to 1): 0.39323, 0.4082.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -36,7 +36,7 @@ Scene: work. Object: Red-roof mechanic workshop. Artwork anchor (x/y, 0 to 1): 0
 
 ## UK bar work
 
-Scene: uk. Object: Brick pub with green trim. Artwork anchor (x/y, 0 to 1): 0.392, 0.324.
+Object: Brick pub with green trim. Position on the shared world artwork (x/y, 0 to 1): 0.09961, 0.29492.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -44,7 +44,7 @@ Scene: uk. Object: Brick pub with green trim. Artwork anchor (x/y, 0 to 1): 0.39
 
 ## Tower 42 demolition
 
-Scene: uk. Object: Office tower with strip-out worksite. Artwork anchor (x/y, 0 to 1): 0.851, 0.532.
+Object: Straight-sided Tower 42 with vertical metal ribs and an angular crown. Position on the shared world artwork (x/y, 0 to 1): 0.15299, 0.11719.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -52,7 +52,7 @@ Scene: uk. Object: Office tower with strip-out worksite. Artwork anchor (x/y, 0 
 
 ## Gift-card factory
 
-Scene: uk. Object: Gift-card factory with packing tables. Artwork anchor (x/y, 0 to 1): 0.653, 0.313.
+Object: Gift-card factory with packing tables. Position on the shared world artwork (x/y, 0 to 1): 0.21094, 0.29688.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -60,7 +60,7 @@ Scene: uk. Object: Gift-card factory with packing tables. Artwork anchor (x/y, 0
 
 ## W.A.A.P.
 
-Scene: work. Object: Timber festival stage. Artwork anchor (x/y, 0 to 1): 0.487, 0.347.
+Object: Timber festival stage. Position on the shared world artwork (x/y, 0 to 1): 0.51888, 0.40918.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -68,7 +68,7 @@ Scene: work. Object: Timber festival stage. Artwork anchor (x/y, 0 to 1): 0.487,
 
 ## Storage marquees
 
-Scene: uk. Object: White storage marquee with pallets. Artwork anchor (x/y, 0 to 1): 0.502, 0.488.
+Object: White storage marquee with pallets. Position on the shared world artwork (x/y, 0 to 1): 0.29362, 0.29199.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -76,7 +76,7 @@ Scene: uk. Object: White storage marquee with pallets. Artwork anchor (x/y, 0 to
 
 ## Temporary horse stables
 
-Scene: uk. Object: Modular horse stable installation. Artwork anchor (x/y, 0 to 1): 0.825, 0.218.
+Object: Modular horse stable installation. Position on the shared world artwork (x/y, 0 to 1): 0.39779, 0.29883.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -84,7 +84,7 @@ Scene: uk. Object: Modular horse stable installation. Artwork anchor (x/y, 0 to 
 
 ## Sheet-metal roofing
 
-Scene: trades. Object: Building with a sheet-metal roof being installed. Artwork anchor (x/y, 0 to 1): 0.542, 0.587.
+Object: Building with a sheet-metal roof being installed. Position on the shared world artwork (x/y, 0 to 1): 0.5013, 0.30176.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -92,7 +92,7 @@ Scene: trades. Object: Building with a sheet-metal roof being installed. Artwork
 
 ## Moreton Events
 
-Scene: work. Object: Separate white festival production marquee. Artwork anchor (x/y, 0 to 1): 0.578, 0.366.
+Object: Separate white festival production marquee. Position on the shared world artwork (x/y, 0 to 1): 0.61133, 0.43164.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -100,7 +100,7 @@ Scene: work. Object: Separate white festival production marquee. Artwork anchor 
 
 ## Shopfitting
 
-Scene: trades. Object: Open-front shopfitting workshop. Artwork anchor (x/y, 0 to 1): 0.446, 0.421.
+Object: Open-front shopfitting workshop. Position on the shared world artwork (x/y, 0 to 1): 0.58073, 0.3125.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -108,7 +108,7 @@ Scene: trades. Object: Open-front shopfitting workshop. Artwork anchor (x/y, 0 t
 
 ## Queensland Rail
 
-Scene: work. Object: Yellow railway maintenance train. Artwork anchor (x/y, 0 to 1): 0.301, 0.377.
+Object: Yellow railway maintenance train. Position on the shared world artwork (x/y, 0 to 1): 0.11914, 0.61914.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -116,7 +116,7 @@ Scene: work. Object: Yellow railway maintenance train. Artwork anchor (x/y, 0 to
 
 ## Skystar
 
-Scene: work. Object: Passenger aircraft on the airport apron. Artwork anchor (x/y, 0 to 1): 0.506, 0.203.
+Object: Passenger aircraft on the airport apron. Position on the shared world artwork (x/y, 0 to 1): 0.70833, 0.17285.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -124,7 +124,7 @@ Scene: work. Object: Passenger aircraft on the airport apron. Artwork anchor (x/
 
 ## Semi-trailer workshop
 
-Scene: trades. Object: Semi-trailer repair workshop. Artwork anchor (x/y, 0 to 1): 0.832, 0.481.
+Object: Semi-trailer repair workshop. Position on the shared world artwork (x/y, 0 to 1): 0.6901, 0.3125.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -132,7 +132,7 @@ Scene: trades. Object: Semi-trailer repair workshop. Artwork anchor (x/y, 0 to 1
 
 ## ACE Treelopping Services
 
-Scene: trades. Object: Tree-service truck with chipper. Artwork anchor (x/y, 0 to 1): 0.822, 0.329.
+Object: Tree-service truck with chipper. Position on the shared world artwork (x/y, 0 to 1): 0.27995, 0.64844.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -140,7 +140,7 @@ Scene: trades. Object: Tree-service truck with chipper. Artwork anchor (x/y, 0 t
 
 ## Hume Concrete
 
-Scene: trades. Object: Precast concrete culvert yard. Artwork anchor (x/y, 0 to 1): 0.711, 0.187.
+Object: Precast concrete culvert yard. Position on the shared world artwork (x/y, 0 to 1): 0.78906, 0.32227.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -148,7 +148,7 @@ Scene: trades. Object: Precast concrete culvert yard. Artwork anchor (x/y, 0 to 
 
 ## Ausblast
 
-Scene: work. Object: Yellow industrial service truck. Artwork anchor (x/y, 0 to 1): 0.899, 0.431.
+Object: Yellow industrial service truck. Position on the shared world artwork (x/y, 0 to 1): 0.38281, 0.66406.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -156,7 +156,7 @@ Scene: work. Object: Yellow industrial service truck. Artwork anchor (x/y, 0 to 
 
 ## Australia Post
 
-Scene: work. Object: Red mail delivery van. Artwork anchor (x/y, 0 to 1): 0.449, 0.614.
+Object: Red mail delivery van. Position on the shared world artwork (x/y, 0 to 1): 0.46354, 0.67578.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -164,7 +164,7 @@ Scene: work. Object: Red mail delivery van. Artwork anchor (x/y, 0 to 1): 0.449,
 
 ## Kirby
 
-Scene: work. Object: Cream demonstration van with a vacuum cleaner. Artwork anchor (x/y, 0 to 1): 0.536, 0.619.
+Object: Cream demonstration van beside a vacuum cleaner. Position on the shared world artwork (x/y, 0 to 1): 0.52799, 0.68555.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -172,7 +172,7 @@ Scene: work. Object: Cream demonstration van with a vacuum cleaner. Artwork anch
 
 ## Viande Fine Foods
 
-Scene: work. Object: White refrigerated delivery truck. Artwork anchor (x/y, 0 to 1): 0.85, 0.548.
+Object: White refrigerated delivery truck. Position on the shared world artwork (x/y, 0 to 1): 0.62826, 0.68359.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -180,7 +180,7 @@ Scene: work. Object: White refrigerated delivery truck. Artwork anchor (x/y, 0 t
 
 ## Owner builder
 
-Scene: work. Object: Unfinished timber house on the hill. Artwork anchor (x/y, 0 to 1): 0.828, 0.145.
+Object: Unfinished timber house on the hill. Position on the shared world artwork (x/y, 0 to 1): 0.82357, 0.1875.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -188,7 +188,7 @@ Scene: work. Object: Unfinished timber house on the hill. Artwork anchor (x/y, 0
 
 ## Maringa Farm
 
-Scene: work. Object: Green-roof farm office. Artwork anchor (x/y, 0 to 1): 0.447, 0.468.
+Object: Green-roof farm office. Position on the shared world artwork (x/y, 0 to 1): 0.79883, 0.43457.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -196,7 +196,7 @@ Scene: work. Object: Green-roof farm office. Artwork anchor (x/y, 0 to 1): 0.447
 
 ## Americold / Labourforce
 
-Scene: work. Object: Sage-green distribution warehouse. Artwork anchor (x/y, 0 to 1): 0.745, 0.352.
+Object: Sage-green distribution warehouse. Position on the shared world artwork (x/y, 0 to 1): 0.90495, 0.30273.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -204,7 +204,7 @@ Scene: work. Object: Sage-green distribution warehouse. Artwork anchor (x/y, 0 t
 
 ## Q & A Market Research
 
-Scene: work. Object: Glass-fronted telephone research office. Artwork anchor (x/y, 0 to 1): 0.737, 0.244.
+Object: Glass-fronted telephone research office. Position on the shared world artwork (x/y, 0 to 1): 0.70833, 0.42188.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -212,7 +212,7 @@ Scene: work. Object: Glass-fronted telephone research office. Artwork anchor (x/
 
 ## Yorke Consulting
 
-Scene: work. Object: Orange forklift beside the concrete building site. Artwork anchor (x/y, 0 to 1): 0.961, 0.356.
+Object: Orange forklift beside the concrete building site. Position on the shared world artwork (x/y, 0 to 1): 0.90951, 0.17578.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -220,7 +220,7 @@ Scene: work. Object: Orange forklift beside the concrete building site. Artwork 
 
 ## Generative AI research
 
-Scene: work. Object: Small timber research studio beside the wharf. Artwork anchor (x/y, 0 to 1): 0.391, 0.735.
+Object: Warm timber AI research studio. Position on the shared world artwork (x/y, 0 to 1): 0.90495, 0.41406.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -228,7 +228,7 @@ Scene: work. Object: Small timber research studio beside the wharf. Artwork anch
 
 ## Grace Lutheran College
 
-Scene: education. Object: Red-brick high school with a small bell tower. Artwork anchor (x/y, 0 to 1): 0.365, 0.439.
+Object: Red-brick high school with a small bell tower. Position on the shared world artwork (x/y, 0 to 1): 0.25391, 0.16602.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -236,7 +236,7 @@ Scene: education. Object: Red-brick high school with a small bell tower. Artwork
 
 ## Googa
 
-Scene: education. Object: Outdoor-education lodge. Artwork anchor (x/y, 0 to 1): 0.829, 0.741.
+Object: Outdoor-education lodge. Position on the shared world artwork (x/y, 0 to 1): 0.61263, 0.19238.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -244,7 +244,7 @@ Scene: education. Object: Outdoor-education lodge. Artwork anchor (x/y, 0 to 1):
 
 ## University of the Sunshine Coast
 
-Scene: education. Object: Sandstone university hall. Artwork anchor (x/y, 0 to 1): 0.591, 0.591.
+Object: Sandstone university hall. Position on the shared world artwork (x/y, 0 to 1): 0.35807, 0.16309.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -252,7 +252,7 @@ Scene: education. Object: Sandstone university hall. Artwork anchor (x/y, 0 to 1
 
 ## TAFE
 
-Scene: education. Object: Technical college with workshop and computer classroom. Artwork anchor (x/y, 0 to 1): 0.819, 0.463.
+Object: Technical college with workshop and computer classroom. Position on the shared world artwork (x/y, 0 to 1): 0.45052, 0.16504.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -261,7 +261,7 @@ Scene: education. Object: Technical college with workshop and computer classroom
 
 ## Workplace training records
 
-Scene: education. Object: Cream training records building. Artwork anchor (x/y, 0 to 1): 0.4, 0.216.
+Object: Cream training records building. Position on the shared world artwork (x/y, 0 to 1): 0.48568, 0.58203.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -271,7 +271,7 @@ Scene: education. Object: Cream training records building. Artwork anchor (x/y, 
 
 ## Sarina Russo
 
-Scene: education. Object: Business college with a timber verandah. Artwork anchor (x/y, 0 to 1): 0.595, 0.397.
+Object: Business college with a timber verandah. Position on the shared world artwork (x/y, 0 to 1): 0.52083, 0.18359.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -279,7 +279,7 @@ Scene: education. Object: Business college with a timber verandah. Artwork ancho
 
 ## Christopher Howard Training
 
-Scene: education. Object: Green-roof seminar and training house. Artwork anchor (x/y, 0 to 1): 0.444, 0.326.
+Object: Green-roof seminar and training house. Position on the shared world artwork (x/y, 0 to 1): 0.0931, 0.52539.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -287,7 +287,7 @@ Scene: education. Object: Green-roof seminar and training house. Artwork anchor 
 
 ## iTunes University
 
-Scene: education. Object: Media learning library. Artwork anchor (x/y, 0 to 1): 0.601, 0.209.
+Object: Media learning library. Position on the shared world artwork (x/y, 0 to 1): 0.30013, 0.54199.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -295,7 +295,7 @@ Scene: education. Object: Media learning library. Artwork anchor (x/y, 0 to 1): 
 
 ## Independent study
 
-Scene: education. Object: Independent-study cottage. Artwork anchor (x/y, 0 to 1): 0.861, 0.184.
+Object: Independent-study cottage. Position on the shared world artwork (x/y, 0 to 1): 0.4082, 0.5625.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -304,7 +304,7 @@ Scene: education. Object: Independent-study cottage. Artwork anchor (x/y, 0 to 1
 
 ## Evocca
 
-Scene: education. Object: Game-design school with computer studio. Artwork anchor (x/y, 0 to 1): 0.755, 0.316.
+Object: Game-design school with computer studio. Position on the shared world artwork (x/y, 0 to 1): 0.19792, 0.53223.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -312,7 +312,7 @@ Scene: education. Object: Game-design school with computer studio. Artwork ancho
 
 ## Historical Museum
 
-Scene: community. Object: Local history museum with archive desk. Artwork anchor (x/y, 0 to 1): 0.394, 0.31.
+Object: Local history museum with archive desk. Position on the shared world artwork (x/y, 0 to 1): 0.58073, 0.56445.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -320,7 +320,7 @@ Scene: community. Object: Local history museum with archive desk. Artwork anchor
 
 ## Island Vibe
 
-Scene: community. Object: Timber music-festival stage. Artwork anchor (x/y, 0 to 1): 0.6, 0.4.
+Object: Timber music-festival stage. Position on the shared world artwork (x/y, 0 to 1): 0.70833, 0.55664.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -328,7 +328,7 @@ Scene: community. Object: Timber music-festival stage. Artwork anchor (x/y, 0 to
 
 ## Quandamooka Festival
 
-Scene: community. Object: Open-sided coastal event pavilion. Artwork anchor (x/y, 0 to 1): 0.856, 0.405.
+Object: Open-sided coastal event pavilion. Position on the shared world artwork (x/y, 0 to 1): 0.80469, 0.57617.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -336,7 +336,7 @@ Scene: community. Object: Open-sided coastal event pavilion. Artwork anchor (x/y
 
 ## Community web design
 
-Scene: community. Object: Web-design cottage with computer desks. Artwork anchor (x/y, 0 to 1): 0.849, 0.206.
+Object: Web-design cottage with computer desks. Position on the shared world artwork (x/y, 0 to 1): 0.72786, 0.70605.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -344,7 +344,7 @@ Scene: community. Object: Web-design cottage with computer desks. Artwork anchor
 
 ## Myriad Conference
 
-Scene: community. Object: Glass-fronted technology conference hall. Artwork anchor (x/y, 0 to 1): 0.466, 0.57.
+Object: Glass-fronted technology conference hall. Position on the shared world artwork (x/y, 0 to 1): 0.91146, 0.55273.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -352,7 +352,7 @@ Scene: community. Object: Glass-fronted technology conference hall. Artwork anch
 
 ## Space Development Nexus
 
-Scene: community. Object: AI strategy and space-learning studio. Artwork anchor (x/y, 0 to 1): 0.792, 0.638.
+Object: AI strategy and space-learning studio. Position on the shared world artwork (x/y, 0 to 1): 0.82031, 0.68164.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
@@ -360,8 +360,16 @@ Scene: community. Object: AI strategy and space-learning studio. Artwork anchor 
 
 ## Meals on Wheels
 
-Scene: community. Object: Meal-delivery van with insulated trays. Artwork anchor (x/y, 0 to 1): 0.611, 0.21.
+Object: Meal-delivery van with insulated trays. Position on the shared world artwork (x/y, 0 to 1): 0.92773, 0.68457.
 
 | Entry | Role or study | Organisation | Dates | Source |
 |---|---|---|---|---|
 | meals-on-wheels | Aged-care meal delivery volunteer | Meals on Wheels | 2021 | cv2024, p. 1: Right panel, Volunteering |
+
+## Point Lookout Fishing Club
+
+Object: Timber fishing-club boathouse on the wharf. Position on the shared world artwork (x/y, 0 to 1): 0.515, 0.766.
+
+| Entry | Role or study | Organisation | Dates | Source |
+|---|---|---|---|---|
+| point-lookout-fishing-club | Founding secretary, volunteer | Point Lookout Fishing Club | 2024 to present | fishing-club-20260921: Founding secretary, 2024 to current, directly confirmed by Luke |
